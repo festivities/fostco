@@ -1,21 +1,15 @@
-.Header {
+.nav-header {
     background: $header-footer-color;
     height: $header-footer-height;
     width: 100%;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
     display: flex;
     align-items: center;
     color: white;
-}
-
-.header-row {
-    width: 100%;
-    height: 100%;
-    margin: 0 !important;
+    padding-right: 10px;
 }
 
 .header-title {
+    width: 40%;
     height: 100%;
     font-size: 1em;
     padding-left: 10% !important;
@@ -24,18 +18,20 @@
 }
 
 .navigation {
+    width: 60%;
     height: 100%;
     display: block;
+    padding-right: 20px;
 }
 
 .nav-menu {
     height: 100%;
+    margin-top: 0;
     margin-bottom: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
     list-style: none;
-    padding-left: 0;
 }
 
 .nav-item {
@@ -45,13 +41,12 @@
     font-size: 0.457em;
     height: 50%;
     background: gray;
-    max-width: 32%;
+    width: 32%;
     border-radius: 12px;
 }
 
 .nav-item:hover {
     cursor: pointer;
-    // background: grey;
 }
 
 .navigation-dropdown {
@@ -59,6 +54,10 @@
 }
 
 @media (max-width: 992px) {
+    .header-title {
+        width: 80% !important;
+    }
+
     .navigation {
         display: none;
     }
@@ -70,15 +69,59 @@
         padding-left: 0 !important;
         padding-right: 10px !important;
         height: 100%;
+        width: 20% important;
     }
     
     .nav-dropdown-button {
-        width: 50px;
-        height: 40px;
+        width: 54px;
+        height: 54px;
         background: white;
         border: none;
         outline: none;
         border-radius: 10%;
+    }
+
+    .nav-dropdown-button:hover {
+        cursor: pointer;
+        background: lightgray;
+    }
+
+    .icon-bar {
+        background-color: black;
+		display: block;
+		width: 34px;
+		height: 2px;
+		border-radius: 1px;
+		margin: 8px auto;
+    }
+
+    .mobile-nav-collapse {
+        height: 100px;
+        width: 100%;
+        background: green;
+    }
+
+    .mobile-nav-menu {
+        height: 100%;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 0.5em;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-left: 0;
+    }
+
+    .mobile-nav-item {
+        height: 33%;
+        display: flex;
+        align-items: center;
+        padding-left: 40px;
+    }
+
+    .mobile-nav-item:hover {
+        background: red;
     }
 }
 
