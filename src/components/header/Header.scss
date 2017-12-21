@@ -2,8 +2,8 @@
     background: $header-footer-color;
     height: $header-footer-height;
     width: 100%;
-    padding-left: 2%;
-    padding-right: 2%;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
     display: flex;
     align-items: center;
     color: white;
@@ -80,9 +80,14 @@
         outline: none;
         border-radius: 10%;
     }
-    
-    .icon-bar {
-        background: black;
-        height: 2px;
+}
+
+@media (max-width: 360px) {
+    .header-title {
+        width: 80% !important;
+    }
+
+    .navigation-dropdown {
+        width: 20% !important;
     }
 }
