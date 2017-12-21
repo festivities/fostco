@@ -13,11 +13,17 @@ body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    font-size: 35px;
+    font-size: 40px !important;
 }
 
 @media (max-width: 576px) {
     body {
-        font-size: 12px;
+        font-size: 25px !important;
+    }
+}
+
+@media (max-width: 400px) {
+    body {
+        font-size: 12px !important;
     }
 }
