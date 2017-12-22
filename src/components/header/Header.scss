@@ -2,7 +2,7 @@ $mobile-nav-expand-time: 0.75s;
 
 .Header {
     .nav-header { 
-        background-color: $header-footer-color;
+        background-color: $header-footer-background;
         height: $header-height;
         width: 100%;
         display: flex;
@@ -14,7 +14,6 @@ $mobile-nav-expand-time: 0.75s;
             width: 70%;
             height: 100%;
             font-size: 1em;
-            padding-left: 10%;
             display: flex;
             align-items: center;
     
@@ -76,7 +75,7 @@ $mobile-nav-expand-time: 0.75s;
     }
 }
 
-@media (max-width: 992px) {
+@media (max-width: $mobile-width) {
     .Header {
         .nav-header {
             .header-title-container {
@@ -124,7 +123,7 @@ $mobile-nav-expand-time: 0.75s;
         .mobile-nav-collapse {
             height: 100px;
             width: 100%;
-            background-color: $header-footer-color;
+            background-color: $header-footer-background;
             transition: height $mobile-nav-expand-time;
             display: block;
 

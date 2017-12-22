@@ -1,17 +1,17 @@
 /*Globals.scss holds global SCSS variables to be used across components */
 
+$mobile-width: 992px; /* width of client for mobile */
+
 /*Header and footer globals*/
 @import url('https://fonts.googleapis.com/css?family=Pacifico');
-$header-footer-height: 70px;
 
-$header-height: 70px;
-$footer-height: 70px;
-
-$title-font: 'Pacifico', cursive;
-$header-footer-color: black;
-$header-footer-font-color: white;
-$header-footer-hover-background: lightblue;
-$header-footer-hover-color: black;
+$header-height: 70px; /* height of header div */
+$footer-height: 80px; /* height of footer div */
+$title-font: 'Pacifico', cursive; /* font for title/logo */
+$header-footer-background: black; /* background color of header/footer div */
+$header-footer-font-color: white; /* font color for header/footer text */
+$header-footer-hover-background: lightblue; /* div background for header/footer on hover */
+$header-footer-hover-color: black; /* font color for header/footer/on hover */
 /**/
 
-$content-height: calc(100% - #{$header-height} - #{$footer-height});
+$content-height: calc(100% - #{$header-height} - #{$footer-height}); /* height of content minus header/footer */

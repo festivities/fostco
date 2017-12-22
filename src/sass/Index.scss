@@ -4,9 +4,10 @@
 
 /*Component SCSS*/
 @import '../components/App';
-@import '../components/content/ContentContainer';
-@import '../components/footer/Footer';
 @import '../components/header/Header';
+@import '../components/content/ContentContainer';
+@import '../components/content/views/home/Home';
+@import '../components/footer/Footer';
 
 /*Google font*/
 @import url('https://fonts.googleapis.com/css?family=Mukta+Malar');
