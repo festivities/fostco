@@ -9,7 +9,7 @@ $mobile-nav-expand-time: 0.75s;
         align-items: center;
         color: $header-footer-font-color;
     
-        .header-title {
+        .header-title-container {
             font-family: $title-font;
             width: 70%;
             height: 100%;
@@ -18,7 +18,7 @@ $mobile-nav-expand-time: 0.75s;
             display: flex;
             align-items: center;
     
-            .title {
+            .header-title {
                 padding-left: 20px;
                 padding-right: 20px;
     
@@ -79,7 +79,7 @@ $mobile-nav-expand-time: 0.75s;
 @media (max-width: 992px) {
     .Header {
         .nav-header {
-            .header-title {
+            .header-title-container {
                 width: 80%;
             }
 

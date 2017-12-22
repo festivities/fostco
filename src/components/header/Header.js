@@ -63,7 +63,9 @@ class Header extends Component {
         return (
             <header className="Header">
                 <div className="nav-header">
-                        <div className="header-title"><div className="title"  onClick={() => this.props.setNavLink('home')}>Jordan Foster</div></div>
+                        <div className="header-title-container">
+                            <div className="header-title"  onClick={() => this.props.setNavLink('home')}>Jordan Foster</div>
+                        </div>
                         <div className="navigation">
                             <ul className="nav-menu">
                                 {

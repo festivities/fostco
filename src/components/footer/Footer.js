@@ -15,7 +15,9 @@ class Footer extends Component {
         return (
             <footer className="Footer">
                 <div className="footer-content">
-                    <div className="footer-title">Jordan Foster</div>
+                    <div className="footer-title-container">
+                        <div className="footer-title">Jordan Foster</div>
+                    </div>
                     <div className="nav-links">
                         <ul>
                             {
