@@ -15,9 +15,9 @@ class Header extends Component {
 
         this.state = {
             navLinks: [
-                "HOME",
-                "ABOUT",
-                "CONTACT"
+                {name: 'home', value: 'HOME', desktopClass: 'nav-item active', mobileClass: 'mobile-nav-item active'},
+                {name: 'about', value: 'ABOUT', desktopClass: 'nav-item', mobileClass: 'mobile-nav-item'},
+                {name: 'contact', value: 'CONTACT', desktopClass: 'nav-item', mobileClass: 'mobile-nav-item'}
             ],
             mobileNavMenuClass: mobileNavCollapseClasses.menuHidden
         }
@@ -64,16 +64,35 @@ class Header extends Component {
         }
     }
 
+    /*
+    *
+    */
+    onLinkClick = (linkClicked) => {
+        let linkArray = this.state.navLinks;
+
+        for (let link of linkArray) {
+            link.desktopClass = 'nav-item';
+            link.mobileClass = 'mobile-nav-item';
+
+            if (link.name === linkClicked) {
+                link.desktopClass += ' active';
+                link.mobileClass += ' active';
+            }
+        }
+
+        this.setState({navLinks: linkArray});
+    }
+
     render() {
         return (
             <header className="Header">
                 <div className="nav-header">
-                        <div className="header-title">JORDAN FOSTER</div>
+                        <div className="header-title"><div className="title"  onClick={() => this.onLinkClick('home')}>Jordan Foster</div></div>
                         <div className="navigation">
                             <ul className="nav-menu">
                                 {
                                     this.state.navLinks.map((link, index) => {
-                                        return <li className="nav-item" key={index}>{link}</li>
+                                        return <li className={link.desktopClass} key={index} onClick={() => this.onLinkClick(link.name)}>{link.value}</li>
                                     })
                                 }
                             </ul>
@@ -90,7 +109,7 @@ class Header extends Component {
                     <ul className="mobile-nav-list">
                         {
                             this.state.navLinks.map((link, index) => {
-                                return <li className="mobile-nav-item" key={index}>{link}</li>
+                                return <li className={link.mobileClass} key={index} onClick={() => this.onLinkClick(link.name)}>{link.value}</li>
                             })
                         }
                     </ul>

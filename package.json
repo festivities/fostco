@@ -81,7 +81,8 @@
       "web.jsx",
       "jsx",
       "node"
-    ]
+    ],
+    "setupTestFrameworkScriptFile": "<rootDir>/src/test-config.js"
   },
   "babel": {
     "presets": [
@@ -92,6 +93,9 @@
     "extends": "react-app"
   },
   "devDependencies": {
+    "enzyme": "^3.2.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.0",
     "node-sass": "^4.7.2",
     "sass-loader": "^6.0.6"
   }

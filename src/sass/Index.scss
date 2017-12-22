@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Mukta+Malar');
+
 @import './Globals';
 @import '../components/App';
 @import '../components/content/ContentContainer';
@@ -9,10 +11,10 @@ html, body, #root {
 }
   
 body {
+    font-family: 'Mukta Malar', sans-serif;
     height: 100vh;
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
     font-size: 40px !important;
     overflow-y: scroll;
 }
