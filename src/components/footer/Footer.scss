@@ -1,6 +1,6 @@
 .Footer {
     background: $header-footer-color;
-    height: $header-footer-height;
+    height: $footer-height;
     width: 100%;
     position: absolute;
     right: 0;
@@ -17,12 +17,12 @@
         font-size: 0.75em;
 
         div {
-            width: 33%;
+            width: 50%;
             height: 100%;
         }
 
         .footer-title-container {
-            width: 23%;
+            width: 40%;
             font-family: $title-font;
             font-size: 0.6em;
             display: flex;
@@ -38,7 +38,11 @@
         }
 
         .nav-links {
+            width: 50%;
+            padding-right: 10%;
+
             ul {
+                width: 100%;
                 margin-top: 0;
                 margin-bottom: 0;
                 display: flex;
@@ -47,10 +51,11 @@
                 list-style: none;
                 height: 100%;
                 padding-left: 0;
+                float: right;
 
                 li {
                     height: 50%;
-                    width: 33%;
+                    width: 100%;
                     display: flex;
                     align-items: center;
                     justify-content: center;

@@ -2,12 +2,16 @@
 
 /*Header and footer globals*/
 @import url('https://fonts.googleapis.com/css?family=Pacifico');
+$header-footer-height: 70px;
+
+$header-height: 70px;
+$footer-height: 70px;
+
 $title-font: 'Pacifico', cursive;
 $header-footer-color: black;
-$header-footer-height: 70px;
 $header-footer-font-color: white;
 $header-footer-hover-background: lightblue;
 $header-footer-hover-color: black;
 /**/
 
-$content-height: calc(100% - #{$header-footer-height} - #{$header-footer-height});
+$content-height: calc(100% - #{$header-height} - #{$footer-height});

@@ -27,7 +27,6 @@ class Footer extends Component {
                             }
                         </ul>
                     </div>
-                    <div className="site-map"></div>
                 </div>
             </footer>
         );

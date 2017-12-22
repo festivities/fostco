@@ -3,7 +3,7 @@ $mobile-nav-expand-time: 0.75s;
 .Header {
     .nav-header { 
         background-color: $header-footer-color;
-        height: $header-footer-height;
+        height: $header-height;
         width: 100%;
         display: flex;
         align-items: center;
@@ -92,7 +92,7 @@ $mobile-nav-expand-time: 0.75s;
                 align-items: center;
                 justify-content: center;
                 padding-left: 0;
-                padding-right: 10px;
+                padding-right: 10%;
                 height: 100%;
                 width: 20%;
 
