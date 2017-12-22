@@ -1,24 +1,19 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
+import PropTypes from 'prop-types';
 
 const mobileNavCollapseClasses = {
     menuHidden: 'mobile-nav-collapse hidden',
     menuExpanded: 'mobile-nav-collapse expanded'
 }
 const mobileMaxWidth = 992;
-const mobileNavItemTarget = 'mobile-nav-item';
-const mobileNavButtonTarget = 'nav-dropdown-button icon-bar';
 
 class Header extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
 
         this.state = {
-            navLinks: [
-                {name: 'home', value: 'HOME', desktopClass: 'nav-item active', mobileClass: 'mobile-nav-item active'},
-                {name: 'about', value: 'ABOUT', desktopClass: 'nav-item', mobileClass: 'mobile-nav-item'},
-                {name: 'contact', value: 'CONTACT', desktopClass: 'nav-item', mobileClass: 'mobile-nav-item'}
-            ],
+            headerLinks: this.props.navigationLinks,
             mobileNavMenuClass: mobileNavCollapseClasses.menuHidden
         }
     }
@@ -56,43 +51,24 @@ class Header extends Component {
     * Toggles the mobile nav menu when clicking outside of the mobile nav menu button or mobile nav menu
     */
     handleClickOutside = (e) => {
-        if (mobileNavItemTarget.indexOf(e.target.className) < 0) {
-            document.removeEventListener('mousedown', this.handleClickOutside, false);
-            if (mobileNavButtonTarget.indexOf(e.target.className) < 0) {
-                this.setState({mobileNavMenuClass: mobileNavCollapseClasses.menuHidden});
-            }
+        const mobileNavButtonTarget = 'nav-dropdown-button icon-bar';
+
+        document.removeEventListener('mousedown', this.handleClickOutside, false);
+        if (mobileNavButtonTarget.indexOf(e.target.className) < 0) {
+            this.setState({mobileNavMenuClass: mobileNavCollapseClasses.menuHidden});
         }
-    }
-
-    /*
-    *
-    */
-    onLinkClick = (linkClicked) => {
-        let linkArray = this.state.navLinks;
-
-        for (let link of linkArray) {
-            link.desktopClass = 'nav-item';
-            link.mobileClass = 'mobile-nav-item';
-
-            if (link.name === linkClicked) {
-                link.desktopClass += ' active';
-                link.mobileClass += ' active';
-            }
-        }
-
-        this.setState({navLinks: linkArray});
     }
 
     render() {
         return (
             <header className="Header">
                 <div className="nav-header">
-                        <div className="header-title"><div className="title"  onClick={() => this.onLinkClick('home')}>Jordan Foster</div></div>
+                        <div className="header-title"><div className="title"  onClick={() => this.props.setNavLink('home')}>Jordan Foster</div></div>
                         <div className="navigation">
                             <ul className="nav-menu">
                                 {
-                                    this.state.navLinks.map((link, index) => {
-                                        return <li className={link.desktopClass} key={index} onClick={() => this.onLinkClick(link.name)}>{link.value}</li>
+                                    this.state.headerLinks.map((link, index) => {
+                                        return <li className={link.desktopClass} key={index} onClick={() => this.props.setNavLink(link.name)}>{link.value}</li>
                                     })
                                 }
                             </ul>
@@ -108,8 +84,8 @@ class Header extends Component {
                 <div ref="mobile-nav-collapse" className={this.state.mobileNavMenuClass}>
                     <ul className="mobile-nav-list">
                         {
-                            this.state.navLinks.map((link, index) => {
-                                return <li className={link.mobileClass} key={index} onClick={() => this.onLinkClick(link.name)}>{link.value}</li>
+                            this.state.headerLinks.map((link, index) => {
+                                return <li className={link.mobileClass} key={index} onClick={() => this.props.setNavLink(link.name)}>{link.value}</li>
                             })
                         }
                     </ul>
@@ -118,5 +94,10 @@ class Header extends Component {
         );
     }
 }
+
+Header.propTypes = {
+    navigationLinks: PropTypes.array,
+    setNavLink: PropTypes.func
+};
 
 export default Header;

@@ -1,3 +1,13 @@
+/*Globals.scss holds global SCSS variables to be used across components */
+
+/*Header and footer globals*/
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+$title-font: 'Pacifico', cursive;
 $header-footer-color: black;
 $header-footer-height: 70px;
+$header-footer-font-color: white;
+$header-footer-hover-background: lightblue;
+$header-footer-hover-color: black;
+/**/
+
 $content-height: calc(100% - #{$header-footer-height} - #{$header-footer-height});

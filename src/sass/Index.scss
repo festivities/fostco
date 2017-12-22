@@ -1,10 +1,15 @@
-@import url('https://fonts.googleapis.com/css?family=Mukta+Malar');
 
+/*Global SCSS variables*/
 @import './Globals';
+
+/*Component SCSS*/
 @import '../components/App';
 @import '../components/content/ContentContainer';
 @import '../components/footer/Footer';
 @import '../components/header/Header';
+
+/*Google font*/
+@import url('https://fonts.googleapis.com/css?family=Mukta+Malar');
 
 html, body, #root {
     height: 100%
