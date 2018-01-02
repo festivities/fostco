@@ -7,7 +7,9 @@ class ContentContainer extends Component {
         return (
             <div className="Content-container">
                 <div className="content">
-                    <Home />
+                    <div className="view">
+                        <Home />
+                    </div>
                 </div>
             </div>
         );

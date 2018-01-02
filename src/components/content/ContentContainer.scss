@@ -1,14 +1,22 @@
 .Content-container {
     background: gray;
     width: 100%;
-    height: $content-height;
+    min-height: $content-height;
     display: flex;
     align-items: center;
     justify-content: center;
-}
 
-.content {
-    height: 100%;
-    width: 98%;
-
+    .content {
+        height: 100%;
+        width: 98%;
+        background: lightblue;
+    
+        .view {
+            height: 100%;
+            width: 98%;
+            box-sizing: border-box;
+            padding: 10px 3% 10px 3%;
+            margin: 0 auto;
+        }
+    }
 }

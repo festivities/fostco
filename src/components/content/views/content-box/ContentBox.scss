@@ -1,0 +1,16 @@
+.ContentBox {
+    margin-bottom: 10px;
+
+    .box-title {
+        border: 1px solid black;
+        border-bottom: none;
+        padding: 2px 2px 0px 5px;
+        font-size: 0.8em;
+    }
+
+    .box-content {
+        padding: 10px;
+        border: 1px solid black;
+        font-size: 0.7em;
+    }
+}

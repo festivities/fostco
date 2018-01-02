@@ -8,6 +8,7 @@ $mobile-nav-expand-time: 0.75s;
         display: flex;
         align-items: center;
         color: $header-footer-font-color;
+        padding-left: 1%;
     
         .header-title-container {
             font-family: $title-font;
@@ -18,7 +19,6 @@ $mobile-nav-expand-time: 0.75s;
             align-items: center;
     
             .header-title {
-                padding-left: 20px;
                 padding-right: 20px;
     
                 &:hover {
@@ -32,7 +32,7 @@ $mobile-nav-expand-time: 0.75s;
             width: 30%;
             height: 100%;
             display: block;
-            padding-right: 10%;
+            padding-right: 2%;
     
             .nav-menu {
                 height: 100%;
@@ -91,7 +91,7 @@ $mobile-nav-expand-time: 0.75s;
                 align-items: center;
                 justify-content: center;
                 padding-left: 0;
-                padding-right: 10%;
+                padding-right: 1%;
                 height: 100%;
                 width: 20%;
 
@@ -166,7 +166,7 @@ $mobile-nav-expand-time: 0.75s;
                         font-size: 0.5em;
                         color: $header-footer-font-color;
                         border-top: 1px solid black;
-                        border-bottom: 1px solid black;
+                        border-bottom: 4px solid black;
 
                         &:hover {
                             cursor: pointer;
