@@ -9,6 +9,7 @@ class App extends Component {
     super();
 
     this.state = {
+      currentPage: 'home',
       navigationLinks: [
         {name: 'home', value: 'HOME', desktopClass: 'nav-item active', mobileClass: 'mobile-nav-item active', footerClass: 'footer-nav-item'},
         {name: 'about', value: 'ABOUT', desktopClass: 'nav-item', mobileClass: 'mobile-nav-item', footerClass: 'footer-nav-item'},
@@ -18,6 +19,8 @@ class App extends Component {
   }
 
   setNavLink = (linkClicked) => {
+    this.setState({currentPage: linkClicked});
+
     let linkArray = this.state.navigationLinks;
 
     for (let link of linkArray) {
@@ -31,6 +34,7 @@ class App extends Component {
     }
 
     this.setState({ navigationLinks: linkArray });
+    console.log(this.state.currentPage);
   }
 
   render() {

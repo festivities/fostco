@@ -1,6 +1,8 @@
 $mobile-nav-expand-time: 0.75s;
 
 .Header {
+    border-bottom: 3px solid $highlight-color;
+
     .nav-header { 
         background-color: $header-footer-background;
         height: $header-height;
@@ -23,7 +25,7 @@ $mobile-nav-expand-time: 0.75s;
     
                 &:hover {
                     cursor: pointer;
-                    color: $header-footer-hover-background;
+                    color: $highlight-color;
                 }
             }
         }
@@ -50,16 +52,17 @@ $mobile-nav-expand-time: 0.75s;
                     font-size: 0.4em;
                     height: 50%;
                     width: 32%;
+                    border: 1px solid $highlight-color;
     
                     &.active {
                         color: $header-footer-hover-color;
-                        background: $header-footer-hover-background;
+                        background: $highlight-color;
                     }
     
                     &:hover {
                         cursor: pointer;
                         color: $header-footer-hover-color;
-                        background: $header-footer-hover-background;
+                        background: $highlight-color;
                     }
                 }
             }
@@ -105,7 +108,7 @@ $mobile-nav-expand-time: 0.75s;
 
                     &:hover {
                         cursor: pointer;
-                        background-color: $header-footer-hover-background;
+                        background-color: $highlight-color;
                     }
 
                     .icon-bar {
@@ -139,6 +142,7 @@ $mobile-nav-expand-time: 0.75s;
 
                 li {
                     height: 33%;
+                    margin: 0;
                     display: flex;
                     align-items: center;
                     padding-left: 40px;
@@ -165,17 +169,21 @@ $mobile-nav-expand-time: 0.75s;
                         opacity: 1;
                         font-size: 0.5em;
                         color: $header-footer-font-color;
-                        border-top: 1px solid black;
-                        border-bottom: 4px solid black;
+                        // border-top: 1px solid black;
+                        // border-bottom: 1px solid black;
+
+                        &:last-child {
+                            // border-bottom: none;
+                        }
 
                         &:hover {
                             cursor: pointer;
-                            background-color: $header-footer-hover-background;
+                            background-color: $highlight-color;
                             color: $header-footer-hover-color;
                         }
         
                         &.active {
-                            background-color: $header-footer-hover-background;
+                            background-color: $highlight-color;
                             color: $header-footer-hover-color;
                         }
                     }

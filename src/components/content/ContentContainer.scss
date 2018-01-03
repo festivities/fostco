@@ -1,13 +1,12 @@
 .ContentContainer {
-    width: 98%;
-    background: lightblue;
+    width: 100%;
     margin: 0 auto;
     min-height: $content-height;
 
     .content {
         width: 98%;
         box-sizing: border-box;
-        padding: 10px 3% 10px 3%;
+        padding: 35px 3% 35px 3%;
         margin: 0 auto;
     }
 }
