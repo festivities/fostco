@@ -6,6 +6,7 @@
 @import '../components/App';
 @import '../components/header/Header';
 @import '../components/content/ContentContainer';
+@import '../components/content/views/content-box/ContentBox';
 @import '../components/content/views/home/Home';
 @import '../components/footer/Footer';
 
@@ -18,11 +19,11 @@ html, body, #root {
   
 body {
     font-family: 'Mukta Malar', sans-serif;
-    height: 100vh;
     margin: 0;
     padding: 0;
     font-size: 40px !important;
     overflow-y: scroll;
+    background: gray;
 }
 
 @media (max-width: 576px) {

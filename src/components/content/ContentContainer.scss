@@ -1,24 +1,13 @@
-.Content-container {
-    background: gray;
-    width: 100%;
+.ContentContainer {
+    width: 98%;
+    background: lightblue;
+    margin: 0 auto;
     min-height: $content-height;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
 
     .content {
-        height: 100%;
         width: 98%;
-        background: lightblue;
-        position: absolute;
-    
-        .view {
-            height: 100%;
-            width: 98%;
-            box-sizing: border-box;
-            padding: 10px 3% 10px 3%;
-            margin: 0 auto;
-        }
+        box-sizing: border-box;
+        padding: 10px 3% 10px 3%;
+        margin: 0 auto;
     }
 }

@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import './ContentBox.scss';
-
 class ContentBox extends Component {
 
     render() {

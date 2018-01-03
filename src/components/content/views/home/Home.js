@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 import ContentBox, { Content } from '../content-box/ContentBox';
-import './Home.scss';
 
 class Home extends Component {
 

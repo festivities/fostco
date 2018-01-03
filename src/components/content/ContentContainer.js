@@ -5,11 +5,9 @@ class ContentContainer extends Component {
 
     render() {
         return (
-            <div className="Content-container">
+            <div className="ContentContainer">
                 <div className="content">
-                    <div className="view">
-                        <Home />
-                    </div>
+                    <Home />
                 </div>
             </div>
         );
