@@ -5,11 +5,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 
     .content {
         height: 100%;
         width: 98%;
         background: lightblue;
+        position: absolute;
     
         .view {
             height: 100%;

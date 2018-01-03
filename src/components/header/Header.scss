@@ -8,7 +8,6 @@ $mobile-nav-expand-time: 0.75s;
         display: flex;
         align-items: center;
         color: $header-footer-font-color;
-        padding-left: 1%;
     
         .header-title-container {
             font-family: $title-font;
@@ -19,6 +18,7 @@ $mobile-nav-expand-time: 0.75s;
             align-items: center;
     
             .header-title {
+                padding-left: 20px;
                 padding-right: 20px;
     
                 &:hover {
