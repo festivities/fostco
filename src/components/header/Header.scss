@@ -155,6 +155,7 @@ $mobile-nav-expand-time: 0.75s;
     
                 ul {
                     li {
+                        min-height: 33px;
                         opacity: 0;
                         font-size: 0em;
                     }
@@ -169,12 +170,6 @@ $mobile-nav-expand-time: 0.75s;
                         opacity: 1;
                         font-size: 0.5em;
                         color: $header-footer-font-color;
-                        // border-top: 1px solid black;
-                        // border-bottom: 1px solid black;
-
-                        &:last-child {
-                            // border-bottom: none;
-                        }
 
                         &:hover {
                             cursor: pointer;

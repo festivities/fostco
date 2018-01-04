@@ -34,7 +34,6 @@ class App extends Component {
     }
 
     this.setState({ navigationLinks: linkArray });
-    console.log(this.state.currentPage);
   }
 
   render() {

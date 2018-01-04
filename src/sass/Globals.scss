@@ -7,6 +7,7 @@ $mobile-width: 992px; /* width of client for mobile */
 
 $header-height: 70px; /* height of header div */
 $footer-height: 80px; /* height of footer div */
+$footer-header-border-height: 6px;
 $title-font: 'Pacifico', cursive; /* font for title/logo */
 $header-footer-background: black; /* background color of header/footer div */
 $header-footer-font-color: white; /* font color for header/footer text */
@@ -14,4 +15,4 @@ $highlight-color: #23F0C7; /* div background for header/footer on hover */
 $header-footer-hover-color: black; /* font color for header/footer/on hover */
 /**/
 
-$content-height: calc(100% - (#{$header-height} + #{$footer-height})); /* height of content minus header/footer */
+$content-height: calc(100% - (#{$header-height} + #{$footer-height} + #{$footer-header-border-height})); /* height of content minus header/footer */

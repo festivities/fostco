@@ -13,7 +13,12 @@
     .box-content {
         padding: 10px 10px 10px 1%;
         border: 3px solid $highlight-color;
-        font-size: 0.7em;
+        font-size: 0.45em;
         background: #258EA6;
+    }
+
+    p {
+        margin: 1%;
+        // margin-bottom: 10px;
     }
 }

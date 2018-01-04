@@ -13,6 +13,7 @@ class Header extends Component {
         super(props);
 
         this.state = {
+            pageName: '',
             headerLinks: this.props.navigationLinks,
             mobileNavMenuClass: mobileNavCollapseClasses.menuHidden
         }
@@ -59,10 +60,6 @@ class Header extends Component {
         }
     }
 
-    test = () => {
-        alert('clicked');
-    }
-
     render() {
         return (
             <header className="Header">
@@ -87,12 +84,11 @@ class Header extends Component {
                             </button>
                         </div>
                 </div>
-                <div ref="mobile-nav-collapse" className={this.state.mobileNavMenuClass}>
+                <div ref={node => this.node = node} className={this.state.mobileNavMenuClass}>
                     <ul className="mobile-nav-list">
                         {
                             this.state.headerLinks.map((link, index) => {
-                                // return <li className={link.mobileClass} key={index} onClick={() => this.props.setNavLink(link.name)}>{link.value}</li>
-                                return <li className={link.mobileClass} key={index} onClick={this.test}>{link.value}</li>
+                                return <li className={link.mobileClass} key={index} onClick={() => this.props.setNavLink(link.name)}>{link.value}</li>
                             })
                         }
                     </ul>
