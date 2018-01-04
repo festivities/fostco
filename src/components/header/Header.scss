@@ -2,6 +2,7 @@ $mobile-nav-expand-time: 0.75s;
 
 .Header {
     border-bottom: 3px solid $highlight-color;
+    box-shadow: 0 85px 70px 60px #23F0C7;
 
     .nav-header { 
         background-color: $header-footer-background;
