@@ -12,12 +12,12 @@ class Home extends Component {
                 "home-0",
                 "Welcome!", 
                 [
-                    <p>
+                    <p key="home-p-1">
                         My name is Jordan and I created this site during my time off as a developer.
                         There were multiple reasons why I created this site such as using it as sandbox for
                         new ideas, presenting my knowledge and skills, and because why not!
                     </p>,
-                    <p>
+                    <p key="home-p-2">
                         Check out <a href='www.google.com' key='cb-a-0-home-1'>About</a> for more details about me and how this site was made 
                         or feel free to use <a href='www.google.com' key='cb-a-1-home-1'>Contact</a> to get ahold of me for any questions, comments, or resumes.
                     </p>
@@ -29,8 +29,7 @@ class Home extends Component {
     render() {
         return (
             <div className="HomePage">
-                <div className="image-space">
-                </div>
+                {/* <div className="image-space"></div> */}
                 <ContentBox key={this.state.pageContent.id} boxTitle={this.state.pageContent.title} boxContent={this.state.pageContent.content} boxKey={this.state.pageContent.id} />
             </div>
         )
