@@ -27,7 +27,7 @@ class About extends Component {
                         <p>Thanks for visiting!</p>
                     </div>
                 </div>
-                <div className="content-box">
+                <div className="content-box last-content-box">
                     <div className="box-title">About This Site</div>
                     <div className="box-content">
                         <h3>Some questions I hope I can answer:</h3>
