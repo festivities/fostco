@@ -18,7 +18,7 @@
                 input[type=text], textarea {
                     width: 100%;
                     padding: 10px;
-                    border: 1px solid #ccc;
+                    border: 1px solid $highlight-color;
                     border-radius: 4px;
                     box-sizing: border-box;
                     margin-bottom: 10px;
@@ -29,10 +29,11 @@
                 }
 
                 input[type=submit] {
-                    width: 10%;
+                    width: 15%;
                     background: black;
                     color: white;
-                    padding: 7px 20px;
+                    padding-top: 7px;
+                    padding-bottom: 7px;
                     border: 3px solid $highlight-color;
                     border-radius: 4px;
                     cursor: pointer;

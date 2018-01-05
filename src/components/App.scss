@@ -4,7 +4,7 @@
     .content {
         width: 98%;
         box-sizing: border-box;
-        padding: 35px 2% 35px 2%;
+        padding: 35px 7% 35px 7%;
         margin: 0 auto;
         min-height: $content-height;
     }
@@ -19,12 +19,14 @@
             font-size: 0.6em;
             background: black;
             color: white;
+            border-radius: 10px 10px 0px 0px;
         }
     
         .box-content {
             border: 3px solid $highlight-color;
             font-size: 0.45em;
             background: #258EA6;
+            border-radius: 0px 0px 10px 10px;
         }
     
         p, h3, h4 {
@@ -46,5 +48,25 @@
     
     .content-box:last-child {
         margin-bottom: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .App {
+        .content-box {
+            .box-content {
+                padding: 1%;
+            }
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .App {
+        .content-box {
+            .box-content {
+                padding: 2%;
+            }
+        }
     }
 }
