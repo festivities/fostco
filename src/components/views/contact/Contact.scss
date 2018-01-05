@@ -1,0 +1,50 @@
+.ContactPage {
+    .content-box {
+        .box-content {
+            .contact-area {
+                height: 100%;
+                width: 100%;
+                padding: 1% 2% 1% 2%;
+                box-sizing: border-box;
+
+                h4 {
+                    margin-left: 0;
+                }
+
+                h5 {
+                    margin-top: 0;
+                }
+
+                input[type=text], textarea {
+                    width: 100%;
+                    padding: 10px;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    box-sizing: border-box;
+                    margin-bottom: 10px;
+                }
+
+                textarea {
+                    height: 200px;
+                }
+
+                input[type=submit] {
+                    width: 10%;
+                    background: black;
+                    color: white;
+                    padding: 7px 20px;
+                    border: 3px solid $highlight-color;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    font-size: 0.9em;
+                    font-weight: bold;
+
+                    &:hover {
+                        background: $highlight-color;
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+}
