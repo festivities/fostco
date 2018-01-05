@@ -1,24 +1,37 @@
 import React, { Component } from 'react';
+import { Switch, Route, Redirect } from 'react-router-dom';
 
 import Header from './header/Header';
-import ContentContainer from './content/ContentContainer';
+import Home from './views/home/Home';
+import About from './views/about/About';
+import Contact from './views/contact/Contact';
 import Footer from './footer/Footer';
 
 class App extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
-      currentPage: 'home',
+      currentPage: '',
       navigationLinks: [
-        {name: 'home', value: 'HOME', desktopClass: 'nav-item active', mobileClass: 'mobile-nav-item active', footerClass: 'footer-nav-item'},
-        {name: 'about', value: 'ABOUT', desktopClass: 'nav-item', mobileClass: 'mobile-nav-item', footerClass: 'footer-nav-item'},
-        {name: 'contact', value: 'CONTACT', desktopClass: 'nav-item', mobileClass: 'mobile-nav-item', footerClass: 'footer-nav-item'}
+        {name: 'home', path: '/', value: 'HOME', desktopClass: 'nav-item active', mobileClass: 'mobile-nav-item active', footerClass: 'footer-nav-item'},
+        {name: 'about', path: '/about', value: 'ABOUT', desktopClass: 'nav-item', mobileClass: 'mobile-nav-item', footerClass: 'footer-nav-item'},
+        {name: 'contact', path: '/contact', value: 'CONTACT', desktopClass: 'nav-item', mobileClass: 'mobile-nav-item', footerClass: 'footer-nav-item'}
       ]
     };
   }
 
-  setNavLink = (linkClicked) => {
+  componentDidMount() {
+    this.setNavOnLoad();
+  }
+
+  setNavOnLoad = () => {
+    let path = this.props.location.pathname;
+    let linkClicked = path === '/' ? 'home' : path.replace('/', '');
+    this.setNavLink(linkClicked, path, true);
+  }
+
+  setNavLink = (linkClicked, path, isOnLoad = false) => {
     this.setState({currentPage: linkClicked});
 
     let linkArray = this.state.navigationLinks;
@@ -34,13 +47,24 @@ class App extends Component {
     }
 
     this.setState({ navigationLinks: linkArray });
+
+    if (!isOnLoad) {
+      this.props.history.push(path);
+    }
   }
 
   render() {
     return (
       <div className="App">
         <Header navigationLinks={this.state.navigationLinks} setNavLink={this.setNavLink} />
-        <ContentContainer />
+        <div className="content">
+          <Switch>
+            <Route exact path='/' render={() => <Home setNavLink={this.setNavLink} />} />
+            <Route path='/about' render={() => <About setNavLink={this.setNavLink} />} />
+            <Route path='/contact' component={Contact} />
+            <Redirect to="/" />
+          </Switch>
+        </div>
         <Footer navigationLinks={this.state.navigationLinks} setNavLink={this.setNavLink} />
       </div>
     );

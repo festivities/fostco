@@ -1,3 +1,50 @@
 .App {
     height: 100%;
+
+    .content {
+        width: 98%;
+        box-sizing: border-box;
+        padding: 35px 2% 35px 2%;
+        margin: 0 auto;
+        min-height: $content-height;
+    }
+    
+    .content-box {
+        margin-bottom: 30px;
+    
+        .box-title {
+            border: 3px solid $highlight-color;
+            border-bottom: none;
+            padding: 2px 2px 0px 2%;
+            font-size: 0.6em;
+            background: black;
+            color: white;
+        }
+    
+        .box-content {
+            border: 3px solid $highlight-color;
+            font-size: 0.45em;
+            background: #258EA6;
+        }
+    
+        p, h3, h4 {
+            margin: 1% 2% 1% 2%;
+        }
+    
+        p {
+            margin-top: 0;
+    
+            &:first-child {
+                margin-top: 1%;
+            }
+        }
+    
+        h4 {
+            margin-bottom: 0;
+        }
+    }
+    
+    .content-box:last-child {
+        margin-bottom: 0;
+    }
 }

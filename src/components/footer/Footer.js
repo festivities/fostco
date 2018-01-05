@@ -22,7 +22,7 @@ class Footer extends Component {
                         <ul>
                             {
                                 this.state.footerLinks.map((link, index) => {
-                                    return <li className={link.footerClass} key={index} onClick={() => this.props.setNavLink(link.name)}>{link.value}</li>
+                                    return <li className={link.footerClass} key={index} onClick={() => this.props.setNavLink(link.name, link.path)}>{link.value}</li>
                                 })
                             }
                         </ul>

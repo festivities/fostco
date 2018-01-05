@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import InlineLink from '../../utilities/inline-link/InlineLink';
 
 class About extends Component {
-
+    
     render() {
         return (
             <div className="AboutPage">
@@ -23,7 +24,10 @@ class About extends Component {
                             reading and applying any knowledge gained and it is something I truly enjoy doing. I also love problem solving whether it's some board game 
                             puzzle, video game, or complex function in code that isn't working to perfection.
                         </p>
-                        <p>If you would like a resume or you have any general questions, feel free to use the (Link)Contact(Link) page to send an email.</p>
+                        <p>
+                            If you would like a resume or you have any general questions, feel free to use 
+                            the <InlineLink navFunc={this.props.setNavLink} linkValue='Contact' /> page to send an email.
+                        </p>
                         <p>Thanks for visiting!</p>
                     </div>
                 </div>
@@ -56,7 +60,8 @@ class About extends Component {
                         <h4>Questions about code or you have a suggestion:</h4>
                         <p>
                             This site is partially for experimentation so that's most likely why I did whatever head scratching piece of code you are looking at. 
-                            However, please feel free to use the (Link)Contact(Link) page to send an email with any questions, suggestions, criticisms, or general comments!
+                            However, please feel free to use the <InlineLink navFunc={this.props.setNavLink} linkValue='Contact' /> page to send an email with any questions, suggestions, 
+                            criticisms, or general comments!
                         </p>
                     </div>
                 </div>

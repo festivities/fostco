@@ -1,0 +1,14 @@
+
+.InlineLink {
+    color: blue;
+    text-decoration: underline;
+
+    &:hover {
+        color: lightblue;
+        cursor: pointer;
+    }
+    
+    &:visited {
+        color: lightblue;
+    }
+}
