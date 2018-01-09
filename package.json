@@ -47,7 +47,7 @@
     "webpack-manifest-plugin": "1.3.2",
     "whatwg-fetch": "2.0.3"
   },
-  "homepage": "https://fostivities.github.io",
+  "homepage": "https://fostivities.github.io/fostco",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -b master -d build",
