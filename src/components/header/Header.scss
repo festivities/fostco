@@ -1,17 +1,15 @@
-$mobile-nav-expand-time: 0.75s;
+$mobile-nav-expand-time: 0.65s;
 
 .Header {
-    border-bottom: 3px solid $highlight-color;
-    box-shadow: 0 -70px 70px 60px #23F0C7;
 
-    .nav-header { 
-        background-color: $header-footer-background;
+    .nav-header {
+        background-color: $head-foot-background;
+        color: $head-foot-font-color;
         height: $header-height;
         width: 100%;
         display: flex;
         align-items: center;
-        color: $header-footer-font-color;
-    
+        
         .header-title-container {
             font-family: $title-font;
             width: 60%;
@@ -23,10 +21,11 @@ $mobile-nav-expand-time: 0.75s;
             .header-title {
                 padding-left: 20px;
                 padding-right: 20px;
+                padding-bottom: 3px;
     
                 &:hover {
                     cursor: pointer;
-                    color: $highlight-color;
+                    color: $active-hover-color;
                 }
             }
         }
@@ -53,17 +52,14 @@ $mobile-nav-expand-time: 0.75s;
                     font-size: 0.4em;
                     height: 50%;
                     width: 32%;
-                    border: 1px solid $highlight-color;
     
                     &.active {
-                        color: $header-footer-hover-color;
-                        background: $highlight-color;
+                        background: $active-hover-color;
                     }
     
                     &:hover {
                         cursor: pointer;
-                        color: $header-footer-hover-color;
-                        background: $highlight-color;
+                        background: $active-hover-color;
                     }
                 }
             }
@@ -109,7 +105,7 @@ $mobile-nav-expand-time: 0.75s;
 
                     &:hover {
                         cursor: pointer;
-                        background-color: $highlight-color;
+                        background-color: $active-hover-color;
                     }
 
                     .icon-bar {
@@ -127,9 +123,11 @@ $mobile-nav-expand-time: 0.75s;
         .mobile-nav-collapse {
             height: 100px;
             width: 100%;
-            background-color: $header-footer-background;
+            background-color: $head-foot-background;
             transition: height $mobile-nav-expand-time;
             display: block;
+            color: $head-foot-font-color;
+            overflow: hidden;
 
             ul {
                 height: 100%;
@@ -170,17 +168,14 @@ $mobile-nav-expand-time: 0.75s;
                     li {
                         opacity: 1;
                         font-size: 0.5em;
-                        color: $header-footer-font-color;
 
                         &:hover {
                             cursor: pointer;
-                            background-color: $highlight-color;
-                            color: $header-footer-hover-color;
+                            background-color: $active-hover-color;
                         }
         
                         &.active {
-                            background-color: $highlight-color;
-                            color: $header-footer-hover-color;
+                            background-color: $active-hover-color;
                         }
                     }
                 }
