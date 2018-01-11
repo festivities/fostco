@@ -18,7 +18,7 @@
                 input[type=text], textarea {
                     width: 100%;
                     padding: 10px;
-                    border: 1px solid $highlight-color;
+                    border: 1px solid $active-hover-color;
                     border-radius: 4px;
                     box-sizing: border-box;
                     margin-bottom: 10px;
@@ -35,14 +35,14 @@
                     color: white;
                     padding-top: 7px;
                     padding-bottom: 7px;
-                    border: 3px solid $highlight-color;
+                    border: 3px solid $active-hover-color;
                     border-radius: 4px;
                     cursor: pointer;
                     font-size: 0.9em;
                     font-weight: bold;
 
                     &:hover {
-                        background: $highlight-color;
+                        background: $active-hover-color;
                         color: black;
                     }
                 }

@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route } from 'react-router-dom';
 
-import './sass/Index.scss';
+import './styles/sass/index.scss';
 
 import App from './components/App';
 import registerServiceWorker from './registerServiceWorker';

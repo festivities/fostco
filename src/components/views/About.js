@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import InlineLink from '../../utilities/inline-link/InlineLink';
+import InlineLink from '../common/InlineLink';
 
 class About extends Component {
     
