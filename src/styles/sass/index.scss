@@ -8,11 +8,13 @@ $anchor-hover-color: lightblue;
 $head-height: 70px;
 $foot-height: 80px;
 $head-foot-background: #07BEB8;
-$head-foot-font-color: #ffffff;
+$head-foot-color: #FFFFFF;
 
 $active-hover-color: #0C7489;
 
 $content-height: calc(100% - (#{$head-height} + #{$foot-height}));
+$content-background: #EF6461;
+$content-color: #FFFFFF;
 
 @import url('https://fonts.googleapis.com/css?family=Pacifico');
 $title-font: 'Pacifico', cursive;

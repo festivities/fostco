@@ -11,38 +11,26 @@
     
     .content-box {
         margin-bottom: 30px;
-    
+        background: $content-background;
+        color: $content-color;
+        border: 3px solid $content-color;
+
         .box-title {
-            border: 3px solid $active-hover-color;
-            border-bottom: none;
-            padding: 2px 2px 0px 2%;
-            font-size: 0.6em;
-            background: black;
-            color: white;
-            border-radius: 10px 10px 0px 0px;
+            margin: 0;
         }
     
         .box-content {
-            border: 3px solid $active-hover-color;
             font-size: 0.45em;
-            background: #258EA6;
-            border-radius: 0px 0px 10px 10px;
-        }
-    
-        p, h3, h4 {
-            margin: 1% 2% 1% 2%;
-        }
-    
-        p {
-            margin-top: 0;
-    
-            &:first-child {
-                margin-top: 1%;
+            padding: 1% 3% 3% 3%;
+
+            p:first-child {
+                margin-top: 0;
             }
-        }
-    
-        h4 {
-            margin-bottom: 0;
+            
+            p {
+                margin: 0;
+                margin-top: 15px;
+            }
         }
     }
     
@@ -55,17 +43,7 @@
     .App {
         .content-box {
             .box-content {
-                padding: 1%;
-            }
-        }
-    }
-}
-
-@media (max-width: 400px) {
-    .App {
-        .content-box {
-            .box-content {
-                padding: 2%;
+                padding: 2% 7% 5% 7%;
             }
         }
     }

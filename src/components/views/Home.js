@@ -8,8 +8,8 @@ class Home extends Component {
             <div className="HomePage">
                 {/* <div className="image-space"></div> */}
                 <div className="content-box">
-                    <div className="box-title">Welcome!</div>
                     <div className="box-content">
+                        <h1 className="box-title">Welcome!</h1>
                         <p>
                             My name is Jordan and I created this site during my time off as a developer.
                             There were multiple reasons why I created this site such as using it as sandbox for

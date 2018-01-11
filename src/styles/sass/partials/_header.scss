@@ -4,7 +4,7 @@ $mobile-nav-expand-time: 0.5s;
 
     .nav-header {
         background-color: $head-foot-background;
-        color: $head-foot-font-color;
+        color: $head-foot-color;
         height: $head-height;
         width: 100%;
         display: flex;
@@ -104,7 +104,7 @@ $mobile-nav-expand-time: 0.5s;
                     border-radius: 10%;
 
                     .icon-bar {
-                        background-color: $head-foot-font-color;
+                        background-color: $head-foot-color;
                         display: block;
                         width: 34px;
                         height: 2px;
@@ -126,7 +126,7 @@ $mobile-nav-expand-time: 0.5s;
             background-color: $head-foot-background;
             transition: height $mobile-nav-expand-time;
             display: block;
-            color: $head-foot-font-color;
+            color: $head-foot-color;
             overflow: hidden;
 
             ul {
