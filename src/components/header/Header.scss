@@ -1,4 +1,4 @@
-$mobile-nav-expand-time: 0.65s;
+$mobile-nav-expand-time: 0.5s;
 
 .Header {
 
@@ -98,23 +98,23 @@ $mobile-nav-expand-time: 0.65s;
                 .nav-dropdown-button {
                     width: 54px;
                     height: 54px;
-                    background-color: white;
+                    background: none;
                     border: none;
                     outline: none;
                     border-radius: 10%;
 
-                    &:hover {
-                        cursor: pointer;
-                        background-color: $active-hover-color;
-                    }
-
                     .icon-bar {
-                        background-color: black;
+                        background-color: $head-foot-font-color;
                         display: block;
                         width: 34px;
                         height: 2px;
                         border-radius: 1px;
                         margin: 8px auto;
+                    }
+
+                    &:hover .icon-bar {
+                        cursor: pointer;
+                        background-color: $active-hover-color;
                     }
                 }
             }
