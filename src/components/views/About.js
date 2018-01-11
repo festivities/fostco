@@ -7,8 +7,9 @@ class About extends Component {
         return (
             <div className="AboutPage">
                 <div className="content-box">
-                    <div className="box-title">About Me</div>
                     <div className="box-content">
+                        <h1 className="box-title">About this site and me!</h1>
+                        <h3>About me :</h3>
                         <p>
                             My name is Jordan Foster and I created this site to be able to showcase my knowledge, to use as a sandbox, and to potentially 
                             improve upon to make into a full web application. You can read more about my decision making for this site and why I chose to create 
@@ -30,9 +31,6 @@ class About extends Component {
                         </p>
                         <p>Thanks for visiting!</p>
                     </div>
-                </div>
-                <div className="content-box last-content-box">
-                    <div className="box-title">About This Site</div>
                     <div className="box-content">
                         <h3>Some questions I hope I can answer:</h3>
                         <h4>What libraries or technologies were used to create this site?</h4>
@@ -62,9 +60,15 @@ class About extends Component {
                             This site is partially for experimentation so that's most likely why I did whatever head scratching piece of code you are looking at. 
                             However, please feel free to use the <InlineLink navFunc={this.props.setNavLink} linkValue='Contact' /> page to send an email with any questions, suggestions, 
                             criticisms, or general comments!
-                        </p>
+                    </p>
                     </div>
                 </div>
+                {/* <div className="content-box last-content-box">
+                    <div className="box-title">About This Site</div>
+                    <div className="box-content">
+                        
+                    </div>
+                </div> */}
             </div>
         )
     }
