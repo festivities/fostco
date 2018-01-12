@@ -125,6 +125,9 @@ $mobile-nav-expand-time: 0.5s;
             width: 100%;
             background-color: $head-foot-background;
             transition: height $mobile-nav-expand-time;
+            -webkit-transition: height $mobile-nav-expand-time;
+            -moz-transition: height $mobile-nav-expand-time;
+            -o-transition: height $mobile-nav-expand-time;
             display: block;
             color: $head-foot-color;
             overflow: hidden;
@@ -146,6 +149,9 @@ $mobile-nav-expand-time: 0.5s;
                     align-items: center;
                     padding-left: 40px;
                     transition: opacity $mobile-nav-expand-time, font-size $mobile-nav-expand-time;
+                    -webkit-transition: opacity $mobile-nav-expand-time, font-size $mobile-nav-expand-time;
+                    -moz-transition: opacity $mobile-nav-expand-time, font-size $mobile-nav-expand-time;
+                    -o-transition: opacity $mobile-nav-expand-time, font-size $mobile-nav-expand-time;
                 }
             }
 
