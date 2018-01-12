@@ -1,8 +1,8 @@
 /* Global vars */
 $mobile-width: 992px; /* width of client for mobile */
 $body-color: #424B54;
-$anchor-color: blue;
-$anchor-hover-color: lightblue;
+$link-color: blue;
+$link-hover-color: lightblue;
 
 /*Header and footer globals*/
 $head-height: 70px;
@@ -45,12 +45,12 @@ body {
 }
 
 a {
-    color: $anchor-color;
+    color: $link-color;
     text-decoration: underline;
 
     &:hover {
         cursor: pointer;
-        color: $anchor-hover-color;
+        color: $link-hover-color;
     }
 }
 

@@ -6,6 +6,8 @@
                 width: 100%;
                 padding: 1% 2% 1% 2%;
                 box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
 
                 h4 {
                     margin-left: 0;
@@ -21,6 +23,8 @@
                     border: 1px solid $active-hover-color;
                     border-radius: 4px;
                     box-sizing: border-box;
+                    -webkit-box-sizing: border-box;
+                    -moz-box-sizing: border-box;
                     margin-bottom: 10px;
                 }
 
