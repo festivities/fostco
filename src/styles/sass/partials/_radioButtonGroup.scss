@@ -16,7 +16,7 @@
             height: 20px;
             min-height: 20px;
             border-radius: 50%;
-            background: white;
+            background: $body-color;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -32,7 +32,7 @@
                 border-radius: 50%;
 
                 &.checked {
-                    background: #0C7489;
+                    background: $active-hover-color;
                 }
             }
         }

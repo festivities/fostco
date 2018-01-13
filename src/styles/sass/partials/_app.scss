@@ -22,8 +22,7 @@
     .content-box {
         margin-bottom: 30px;
         background: $content-background;
-        color: $content-color;
-        border: 3px solid $content-color;
+        border: 3px solid $body-color;
         display: flex;
         flex-direction: column;
         flex: 1 !important;
@@ -55,39 +54,6 @@
     .content-box:last-child {
         margin-bottom: 0;
     }
-}
-
-.radio-custom, .radio-custom-label {
-    display: inline-block;
-    vertical-align: middle;
-    margin: 5px;
-    cursor: pointer;
-}
-
-.radio-custom-label {
-    position: relative;
-}
-
-.radio-custom + .radio-custom-label:before {
-    content: '';
-    background: #fff;
-    border: 2px solid #ddd;
-    display: inline-block;
-    vertical-align: middle;
-    width: 20px;
-    height: 20px;
-    padding: 2px;
-    margin-right: 10px;
-    text-align: center;
-}
-
-.radio-custom + .radio-custom-label:before {
-    border-radius: 50%;
-}
-
-.radio-custom:checked + .radio-custom-label:before {
-    content: "A";
-    color: black;
 }
 
 @media (max-width: 576px) {

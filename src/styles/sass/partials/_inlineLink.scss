@@ -1,14 +1,10 @@
 
 .InlineLink {
-    color: $link-color;
+    color: $active-hover-color;
     text-decoration: underline;
 
     &:hover {
-        color: $link-hover-color;
+        color: $body-color;
         cursor: pointer;
-    }
-    
-    &:visited {
-        color: $link-hover-color;
     }
 }

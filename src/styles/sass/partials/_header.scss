@@ -4,7 +4,6 @@ $mobile-nav-expand-time: 0.5s;
 
     .nav-header {
         background-color: $head-foot-background;
-        color: $head-foot-color;
         height: $head-height;
         width: 100%;
         display: flex;
@@ -104,7 +103,7 @@ $mobile-nav-expand-time: 0.5s;
                     border-radius: 10%;
 
                     .icon-bar {
-                        background-color: $head-foot-color;
+                        background: $body-color;
                         display: block;
                         width: 34px;
                         height: 2px;
@@ -114,7 +113,7 @@ $mobile-nav-expand-time: 0.5s;
 
                     &:hover .icon-bar {
                         cursor: pointer;
-                        background-color: $active-hover-color;
+                        background: $active-hover-color;
                     }
                 }
             }
@@ -123,13 +122,12 @@ $mobile-nav-expand-time: 0.5s;
         .mobile-nav-collapse {
             height: 100px;
             width: 100%;
-            background-color: $head-foot-background;
+            background: $head-foot-background;
             transition: height $mobile-nav-expand-time;
             -webkit-transition: height $mobile-nav-expand-time;
             -moz-transition: height $mobile-nav-expand-time;
             -o-transition: height $mobile-nav-expand-time;
             display: block;
-            color: $head-foot-color;
             overflow: hidden;
 
             ul {
@@ -177,11 +175,11 @@ $mobile-nav-expand-time: 0.5s;
 
                         &:hover {
                             cursor: pointer;
-                            background-color: $active-hover-color;
+                            background: $active-hover-color;
                         }
         
                         &.active {
-                            background-color: $active-hover-color;
+                            background: $active-hover-color;
                         }
                     }
                 }
