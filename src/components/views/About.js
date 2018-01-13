@@ -1,18 +1,23 @@
 import React, { Component } from 'react';
 import InlineLink from '../common/InlineLink';
+import RadioButtonGroup from '../common/RadioButtonGroup';
 
 class About extends Component {
 
     constructor(props) {
         super(props);
 
+        this.aboutMe = "About Me";
+        this.aboutSite = "About This Site";
+
         this.state = {
-            aboutText: this.setAboutMeText()
+            aboutText: this.setAboutMeText(),
+            radioOptions: [this.aboutMe, this.aboutSite]
         }
     }
 
-    determineText = (index) => {
-        if (index === 0) {
+    determineText = (option) => {
+        if (this.aboutMe === option) {
             this.setState({aboutText: this.setAboutMeText()});
         } else {
             this.setState({aboutText: this.setAboutSiteText()});
@@ -88,15 +93,7 @@ class About extends Component {
             <div className="AboutPage">
                 <div className="content-box">
                     <div className="box-button-group">
-                        {/* <p className="box-button-text">Click to switch information:</p> */}
-                        <div className="button-container active">
-                            <button className="box-button" onClick={() => {this.determineText(0)}}>About Me</button>
-                            <span className="arrow-down" />
-                        </div>
-                        <div className="button-container">
-                            <button className="box-button" onClick={() => {this.determineText(1)}}>About This Site</button>
-                            <span className="arrow-down" />
-                        </div>
+                        <RadioButtonGroup defaultActive={this.aboutMe} options={this.state.radioOptions} checkAction={(option) => {this.determineText(option)}} />
                     </div>
                     {this.state.aboutText}
                 </div>
