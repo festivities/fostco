@@ -92,9 +92,7 @@ class About extends Component {
         return (
             <div className="AboutPage">
                 <div className="content-box">
-                    <div className="box-button-group">
-                        <RadioButtonGroup defaultActive={this.aboutMe} options={this.state.radioOptions} checkAction={(option) => {this.determineText(option)}} />
-                    </div>
+                    <RadioButtonGroup defaultActive={this.aboutMe} options={this.state.radioOptions} checkAction={(option) => {this.determineText(option)}} />
                     {this.state.aboutText}
                 </div>
             </div>

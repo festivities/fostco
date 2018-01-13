@@ -5,10 +5,6 @@ class RadioButtonGroup extends Component {
     constructor(props) {
         super(props);
 
-        this.containerProperties = {
-            width: this.props.options.length > 0 ? (100 / this.props.options.length) + "%" : "0%"
-        }
-
         this.state = {
             activeValue: this.props.defaultActive ? this.props.defaultActive : null
         }
@@ -28,9 +24,10 @@ class RadioButtonGroup extends Component {
                     return (
                         <div key={index} className="radio-button-container">
                             <div className="radio-button-outer" onClick={() => { this.setChecked(option) }}>
-                                {option === this.state.activeValue ? <div className="radio-button-inner" /> : null}
+                                {option === this.state.activeValue ? <div className="radio-button-inner checked" /> : <div className="radio-button-inner" />}
+                                {/* <div className="radio-button-inner" /> */}
                             </div>
-                            <label className="radio-button-text">{option}</label>
+                            <div className="radio-button-text">{option}</div>
                         </div>
                     )
                 })}
