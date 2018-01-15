@@ -58,21 +58,22 @@ class About extends Component {
                 <h3>Some questions I hope I can answer :</h3>
                 <h5>What libraries or technologies were used to create this site?</h5>
                 <p>
-                    This site was mainly created using <a target="_blank" rel="noopener noreferrer" href="https://github.com/facebookincubator/create-react-app">Facebook's React library</a> for 
+                    This site was created using <a target="_blank" rel="noopener noreferrer" href="https://github.com/facebookincubator/create-react-app">Facebook's React library</a> for 
                     functionality and  <a target="_blank" rel="noopener noreferrer" href="http://sass-lang.com/">Syntastically Awesome Style Sheets (SASS)</a> for design aspects.
                 </p>
 
                 <h5>Why use React for such a simple webpage?</h5>
                 <p>
                     As a developer, I have mainly used Angular for web applications and I wanted to branch out. Using React provided me a way to put 
-                    what I was learning to practice while continuing to build up my skills. I also wanted this site to act as a sandbox for experimentations 
-                    and using React provides a foundation to build more advanced features in the future.
+                    what I was learning to practice while continuing to build up my abilities. I also wanted this site to act as a sandbox for experimentations 
+                    and using React provides the foundation to build more advanced features in the future.
                 </p>
 
                 <h5>Why didn't I use libraries such as bootstrap for features and site style?</h5>
                 <p>
                     Usually I would look to existing packages to help create a website or application but for this site I wanted to build everything from 
-                    scratch. This allows more flexibility over the functionality of elements and helps me learn how certain features function better.
+                    scratch. This allows more flexibility over the functionality of elements and helps me learn how certain features function better. I also 
+                    didn't see much sense in including a large third party file for some small feature.
                 </p>
 
                 <h5>Can I see your code?</h5>
@@ -81,7 +82,7 @@ class About extends Component {
                 <h5>Questions about code or you have a suggestion:</h5>
                 <p>
                     This site is partially for experimentation so that's most likely why I did whatever head scratching piece of code you are looking at. 
-                    However, please feel free to use the <InlineLink navFunc={this.props.setNavLink} linkValue='Contact' /> page to send an email with any questions, suggestions, 
+                    However, please feel free to use the <InlineLink navFunc={this.props.setNavLink} linkValue='Contact' /> page to contact me with any questions, suggestions, 
                     criticisms, or general comments!
                 </p>
             </div>
