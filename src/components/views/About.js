@@ -29,23 +29,23 @@ class About extends Component {
             <div className="box-content">
                 <h3>About me :</h3>
                 <p>
-                    My name is Jordan Foster and I created this site to be able to showcase my knowledge, to use as a sandbox, and eventually use a client to
-                    future services. You can read more about my decision making for this site and why I chose to create 
-                    it by selecting the "About This Site" button at the top.
+                    My name is Jordan Foster and I created this site as a showcase of my abilities, to use as a sandbox, and eventually use as a client for
+                    future services. You can read more about my decision making for this site and why I chose to create it by selecting the "About This Site" 
+                    button at the top.
                 </p><br/>
                 <p>
                     I grew up in Washington state, graduated from Western Washington University in 2015, and now work as a software developer in Seattle, WA. 
                     While I have spent time away from Washington, I was always drawn back to my home state. Go Seahawks.
                 </p><br/>
                 <p>
-                    My most important characteristic to me is my drive for continuous improvement. This characteristic has led me to where I am in my career now. 
-                    I love being given something that I previously had no knowledge of and being able to quickly apply it. This has been the reason for sleepless nights 
-                    reading and applying any knowledge gained and it is something I truly enjoy doing. I also love problem solving whether it's some board game 
-                    puzzle, video game, or complex function in code that isn't working to perfection.
+                    I love my career as a software developer because every day is something new and different. Whether I am working on a web, desktop, or mobile 
+                    application, I am facing complex challenges that push me to learn and improve myself. My two most important characteristics are a love for 
+                    learning and a drive for continuous improvement so software development fits the bill! With a quick and ever changing IT landscape, I am 
+                    constantly learning new technologies or solutions that will help me be the best I can.
                 </p><br/>
                 <p>
-                    If you would like a resume or you have any general questions, feel free to use 
-                    the <InlineLink navFunc={this.props.setNavLink} linkValue='Contact' /> page to send an email.
+                    If you have any questions or would like a resume then feel free to use 
+                    the <InlineLink navFunc={this.props.setNavLink} linkValue='Contact' /> page to get ahold of me.
                 </p><br/>
                 <p>Thanks for visiting!</p>
             </div>

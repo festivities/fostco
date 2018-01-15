@@ -38,7 +38,7 @@ class Contact extends Component {
                     <div className="overlay-info">
                         <h1>Contact</h1>
                         <h5>Currently the contact form is non-functional. This feature is coming soon!</h5>
-                        <h5>Please use either medium below to contact me and I will contact back as soon as possible</h5>
+                        <h5>Please use either medium below to contact me and I will respond as soon as possible</h5>
                         <div className="link-container">
                             <p>Email: <a href="mailto:test@email.com" target="_top">test@email.com</a></p>
                             <p>LinkedIn: <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com">www.linkedin.com</a></p>

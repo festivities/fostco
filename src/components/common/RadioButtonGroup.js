@@ -22,10 +22,9 @@ class RadioButtonGroup extends Component {
             <div className="RadioButtonGroup">
                 {this.props.options.map((option, index) => {
                     return (
-                        <div key={index} className="radio-button-container">
-                            <div className="radio-button-outer" onClick={() => { this.setChecked(option) }}>
+                        <div key={index} className="radio-button-container" onClick={() => { this.setChecked(option) }}>
+                            <div className="radio-button-outer">
                                 {option === this.state.activeValue ? <div className="radio-button-inner checked" /> : <div className="radio-button-inner" />}
-                                {/* <div className="radio-button-inner" /> */}
                             </div>
                             <div className="radio-button-text">{option}</div>
                         </div>
