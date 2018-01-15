@@ -58,14 +58,12 @@ class App extends Component {
     return (
       <div className="App">
         <Header navigationLinks={this.state.navigationLinks} setNavLink={this.setNavLink} />
-        <div className="content">
           <Switch>
             <Route exact path='/' render={() => <Home setNavLink={this.setNavLink} />} />
             <Route path='/about' render={() => <About setNavLink={this.setNavLink} />} />
             <Route path='/contact' component={Contact} />
             <Redirect to="/" />
           </Switch>
-        </div>
         <Footer navigationLinks={this.state.navigationLinks} setNavLink={this.setNavLink} />
       </div>
     );

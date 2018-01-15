@@ -44,7 +44,7 @@ class About extends Component {
                     constantly learning new technologies or solutions that will help me be the best I can.
                 </p><br/>
                 <p>
-                    If you have any questions or would like a resume then feel free to use 
+                    If you have any questions then feel free to use 
                     the <InlineLink navFunc={this.props.setNavLink} linkValue='Contact' /> page to get ahold of me.
                 </p><br/>
                 <p>Thanks for visiting!</p>
@@ -91,11 +91,13 @@ class About extends Component {
     
     render() {
         return (
+            <div className="content">
             <div className="AboutPage">
                 <div className="content-box">
                     <RadioButtonGroup defaultActive={this.aboutMe} options={this.state.radioOptions} checkAction={(option) => {this.determineText(option)}} />
                     {this.state.aboutText}
                 </div>
+            </div>
             </div>
         )
     }
