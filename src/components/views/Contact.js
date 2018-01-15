@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import InlineLink from '../common/InlineLink';
 
 class Contact extends Component {
 
