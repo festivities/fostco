@@ -1,0 +1,66 @@
+/* Global vars */
+$mobile-width: 992px; /* width of client for mobile */
+$body-background: #E8E9EB;
+$body-color: #FFFFFF;
+$link-hover-color: #FFFFFF;
+$active-hover-color: #0C7489;
+
+/*Header and footer globals*/
+$head-height: 70px;
+$foot-height: 80px;
+$head-foot-background: #07BEB8;
+
+$content-height: calc(100% - (#{$head-height} + #{$foot-height}));
+$content-background: #EF6461;
+
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+$title-font: 'Pacifico', cursive;
+
+/*Component SCSS*/
+@import './partials/_app';
+@import './partials/_contact';
+@import './partials/_footer';
+@import './partials/_header';
+@import './partials/_home';
+@import './partials/_inlineLink';
+@import './partials/_radioButtonGroup';
+
+/*Google font*/
+@import url('https://fonts.googleapis.com/css?family=Mukta+Malar');
+
+/* document styling */
+html, body, #root {
+    height: 100%;
+}
+  
+body {
+    font-family: 'Mukta Malar', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 40px !important;
+    overflow-y: scroll;
+    background: $body-background;
+    color: $body-color;
+}
+
+a {
+    color: $active-hover-color;
+    text-decoration: underline;
+
+    &:hover {
+        cursor: pointer;
+        color: $link-hover-color;
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        font-size: 35px !important;
+    }
+}
+
+@media (max-width: 400px) {
+    body {
+        font-size: 30px !important;
+    }
+}

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import InlineLink from '../common/InlineLink';
 
 class Contact extends Component {
 
@@ -33,12 +34,24 @@ class Contact extends Component {
     render() {
         return (
             <div className="ContactPage">
+                <div className="contact-overlay">
+                    <div className="overlay-info">
+                        <h1>Contact</h1>
+                        <h5>Currently the contact form is non-functional. This feature is coming soon!</h5>
+                        <h5>Please use either medium below to contact me and I will respond as soon as possible</h5>
+                        <div className="link-container">
+                            <p>Email: <a href="mailto:test@email.com" target="_top">test@email.com</a></p>
+                            <p>LinkedIn: <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com">www.linkedin.com</a></p>
+                        </div>
+                    </div>
+                    <div className="overlay-opacity"></div>
+                </div>
                 <div className="content-box last-content-box">
-                    <div className="box-title">Contact</div>
                     <div className="box-content">
+                        <h1>Contact</h1>
                         <form className="contact-area" onSubmit={this.handleSubmit}>
-                            <h4>Please use the form below to contact me with any questions!</h4>
-                            <h5>Notice! - Any information entered below will be used only to respond to you and will not be used in any solicitation. No fields but the body are required.</h5>
+                            <h3>Please use the form below to contact me with any questions!</h3>
+                            <h4>Notice! - Any information entered below will be used only to respond to you and will not be used in any solicitation. No fields but the body are required.</h4>
                             <label className="label-name">Name</label>
                             <input className="input-name" type="text" name="name" placeholder="Your name.." value={this.state.name} onChange={this.handleChange} />
 

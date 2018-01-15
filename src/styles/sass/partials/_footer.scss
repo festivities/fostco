@@ -1,24 +1,20 @@
 .Footer {
-    background: $header-footer-background;
-    height: $footer-height;
+    background: $head-foot-background;
+    height: $foot-height;
     width: 100%;
-    position: absolute;
     right: 0;
     left: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-top: 3px solid $highlight-color;
-    box-shadow: 0 70px 70px 60px #23F0C7;
 
     .footer-content {
-        width: 75%;
+        width: 50%;
         height: 75%;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        color: $header-footer-font-color;
         font-size: 0.75em;
 
         .footer-title-container {
@@ -46,13 +42,13 @@
                 list-style: none;
 
                 li {
-                    width: 15%;
+                    width: 33%;
                     display: flex;
                     align-items: center;
                     justify-content: center;
 
                     &:hover {
-                        color: $highlight-color;
+                        color: $active-hover-color;
                         cursor: pointer;
                         text-decoration: underline;
                     }

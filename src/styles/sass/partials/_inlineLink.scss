@@ -1,0 +1,10 @@
+
+.InlineLink {
+    color: $active-hover-color;
+    text-decoration: underline;
+
+    &:hover {
+        color: $body-color;
+        cursor: pointer;
+    }
+}

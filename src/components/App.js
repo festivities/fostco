@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 
-import Header from './header/Header';
-import Home from './views/home/Home';
-import About from './views/about/About';
-import Contact from './views/contact/Contact';
-import Footer from './footer/Footer';
+import Header from './common/Header';
+import Home from './views/Home';
+import About from './views/About';
+import Contact from './views/Contact';
+import Footer from './common/Footer';
 
 class App extends Component {
   constructor(props) {

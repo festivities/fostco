@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import $ from 'jquery';
 import PropTypes from 'prop-types';
 
 const mobileNavCollapseClasses = {
@@ -31,7 +30,7 @@ class Header extends Component {
     * Used to hide open mobile nav menu when window width is greater than 992px
     */
     handleResize = () => {
-        if ($(window).width() > mobileMaxWidth && this.state.mobileNavMenuClass.indexOf(mobileNavCollapseClasses.menuExpanded) > -1) {
+        if (window.innerWidth > mobileMaxWidth && this.state.mobileNavMenuClass.indexOf(mobileNavCollapseClasses.menuExpanded) > -1) {
             this.setState({mobileNavMenuClass: mobileNavCollapseClasses.menuHidden});
         }
     }
