@@ -50,6 +50,7 @@ class App extends Component {
 
     if (!isOnLoad) {
       this.props.history.push(path);
+      window.scrollTo(0,0);
     }
   }
 
