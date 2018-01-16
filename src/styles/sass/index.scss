@@ -9,11 +9,9 @@ $active-hover-color: #0C7489;
 $head-height: 70px;
 $foot-height: 80px;
 $head-foot-background: #07BEB8;
-// $head-foot-background: black;
 
 $content-height: calc(100% - (#{$head-height} + #{$foot-height}));
 $content-background: #EF6461;
-// $content-background: darkgrey;
 
 @import url('https://fonts.googleapis.com/css?family=Pacifico');
 $title-font: 'Pacifico', cursive;
