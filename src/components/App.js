@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 
 import Header from './common/Header';
 import Home from './views/Home';
@@ -62,6 +62,7 @@ class App extends Component {
             <Route exact path='/' render={() => <Home setNavLink={this.setNavLink} />} />
             <Route path='/about' render={() => <About setNavLink={this.setNavLink} />} />
             <Route path='/contact' component={Contact} />
+            <Redirect to="/" />
           </Switch>
         <Footer navigationLinks={this.state.navigationLinks} setNavLink={this.setNavLink} />
       </div>
