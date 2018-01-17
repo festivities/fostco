@@ -9,8 +9,8 @@ import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(
     <BrowserRouter>
-        <Route basename="/" component={App}/>
-    </BrowserRouter>, 
+        <Route path={process.env.PUBLIC_URL + '/'} component={App}/>
+    </BrowserRouter>,
     document.getElementById('root')
 );
 registerServiceWorker();
