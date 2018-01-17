@@ -62,7 +62,6 @@ class App extends Component {
             <Route exact path='/' render={() => <Home setNavLink={this.setNavLink} />} />
             <Route path='/about' render={() => <About setNavLink={this.setNavLink} />} />
             <Route path='/contact' component={Contact} />
-            <Redirect to="/" />
           </Switch>
         <Footer navigationLinks={this.state.navigationLinks} setNavLink={this.setNavLink} />
       </div>
