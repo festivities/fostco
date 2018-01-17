@@ -26,12 +26,12 @@ class App extends Component {
   }
 
   setNavOnLoad = () => {
-    let path = this.props.location.pathname;
-    let linkClicked = path === '/' ? 'home' : path.replace('/', '');
-    this.setNavLink(linkClicked, path, true);
+    let pathName = this.props.location.pathname;
+    let linkClicked = pathName === '/' ? 'home' : pathName.replace('/', '');
+    this.setNavLink(linkClicked, pathName, true);
   }
 
-  setNavLink = (linkClicked, path, isOnLoad = false) => {
+  setNavLink = (linkClicked, pathName, isOnLoad = false) => {
     this.setState({currentPage: linkClicked});
 
     let linkArray = this.state.navigationLinks;
@@ -49,9 +49,13 @@ class App extends Component {
     this.setState({ navigationLinks: linkArray });
 
     if (!isOnLoad) {
-      this.props.history.push(process.env.PUBLIC_URL + path);
+      this.props.history.push(this.setPublicPath(pathName));
       window.scrollTo(0,0);
     }
+  }
+
+  setPublicPath = (pathName) => {
+    return process.env.PUBLIC_URL + pathName;
   }
 
   render() {
@@ -59,9 +63,9 @@ class App extends Component {
       <div className="App">
         <Header navigationLinks={this.state.navigationLinks} setNavLink={this.setNavLink} />
           <Switch>
-            <Route exact path={process.env.PUBLIC_URL + '/'} render={() => <Home setNavLink={this.setNavLink} />} />
-            <Route path={process.env.PUBLIC_URL + '/about'} render={() => <About setNavLink={this.setNavLink} />} />
-            <Route path={process.env.PUBLIC_URL + '/contact'} component={Contact} />
+            <Route exact path={this.setPublicPath('/')} render={() => <Home setNavLink={this.setNavLink} />} />
+            <Route path={this.setPublicPath('/about')} render={() => <About setNavLink={this.setNavLink} />} />
+            <Route path={this.setPublicPath('/contact')} component={Contact} />
             <Redirect to='/' />
           </Switch>
         <Footer navigationLinks={this.state.navigationLinks} setNavLink={this.setNavLink} />
