@@ -59,10 +59,10 @@ class App extends Component {
       <div className="App">
         <Header navigationLinks={this.state.navigationLinks} setNavLink={this.setNavLink} />
           <Switch>
-            <Route exact path={process.env.PUBLIC_URL + '/'} render={() => <Home setNavLink={this.setNavLink} />} />
-            <Route path={process.env.PUBLIC_URL + '/about'} render={() => <About setNavLink={this.setNavLink} />} />
-            <Route path={process.env.PUBLIC_URL + '/contact'} component={Contact} />
-            <Redirect to={process.env.PUBLIC_URL + '/'}/>
+            <Route exact path='/' render={() => <Home setNavLink={this.setNavLink} />} />
+            <Route path='/about' render={() => <About setNavLink={this.setNavLink} />} />
+            <Route path='/contact' component={Contact} />
+            <Redirect to='/' />
           </Switch>
         <Footer navigationLinks={this.state.navigationLinks} setNavLink={this.setNavLink} />
       </div>
