@@ -128,7 +128,7 @@ $mobile-nav-expand-time: 0.5s;
             -moz-transition: height $mobile-nav-expand-time;
             -o-transition: height $mobile-nav-expand-time;
             display: block;
-            overflow: hidden;
+            // overflow: hidden;
 
             ul {
                 height: 100%;
