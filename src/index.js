@@ -9,7 +9,7 @@ import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(
     <BrowserRouter>
-        <Route path="/" component={App}/>
+        <Route path="/fostco/" component={App}/>
     </BrowserRouter>, 
     document.getElementById('root')
 );
