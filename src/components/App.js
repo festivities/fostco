@@ -49,7 +49,7 @@ class App extends Component {
     this.setState({ navigationLinks: linkArray });
 
     if (!isOnLoad) {
-      this.props.history.push(path);
+      this.props.history.push(process.env.PUBLIC_URL + path);
       window.scrollTo(0,0);
     }
   }
