@@ -10,12 +10,19 @@ const mobileMaxWidth = 992;
 class Header extends Component {
     constructor(props) {
         super(props);
+        
+        this.headerMenuCollapseClasses = {
+            menuHidden: 'Header',
+            menuActive: 'Header active'
+        };
 
         this.state = {
             pageName: '',
             headerLinks: this.props.navigationLinks,
-            mobileNavMenuClass: mobileNavCollapseClasses.menuHidden
-        }
+            mobileNavMenuClass: mobileNavCollapseClasses.menuHidden,
+            headerClass: this.headerMenuCollapseClasses.menuHidden,
+            isHeaderOpen: false
+        };
     }
 
     componentDidMount() {
@@ -30,8 +37,11 @@ class Header extends Component {
     * Used to hide open mobile nav menu when window width is greater than 992px
     */
     handleResize = () => {
-        if (window.innerWidth > mobileMaxWidth && this.state.mobileNavMenuClass.indexOf(mobileNavCollapseClasses.menuExpanded) > -1) {
-            this.setState({mobileNavMenuClass: mobileNavCollapseClasses.menuHidden});
+        if (window.innerWidth > mobileMaxWidth && this.state.headerClass.indexOf(this.headerMenuCollapseClasses.menuActive) > -1) {
+            this.setState({
+                headerClass: this.headerMenuCollapseClasses.menuHidden,
+                isHeaderOpen: false
+            });
         }
     }
 
@@ -39,11 +49,18 @@ class Header extends Component {
     * Toggles the mobile nav menu on click of the mobile nav menu button
     */
     toggleMobileNavMenu = () => {
-        if (this.state.mobileNavMenuClass.indexOf(mobileNavCollapseClasses.menuHidden) > -1) {
-            this.setState({mobileNavMenuClass: mobileNavCollapseClasses.menuExpanded});
+        let headerClass = this.state.headerClass.indexOf(this.headerMenuCollapseClasses.menuActive) > -1 
+                            ? this.headerMenuCollapseClasses.menuHidden 
+                            : this.headerMenuCollapseClasses.menuActive;
+        let isHeaderOpen = !this.state.isHeaderOpen;
+
+        this.setState({
+            headerClass: headerClass,
+            isHeaderOpen: isHeaderOpen
+        });
+
+        if (isHeaderOpen) {
             document.addEventListener('mousedown', this.handleClickOutside, false);
-        } else {
-            this.setState({mobileNavMenuClass: mobileNavCollapseClasses.menuHidden});
         }
     }
 
@@ -55,13 +72,16 @@ class Header extends Component {
 
         document.removeEventListener('mousedown', this.handleClickOutside, false);
         if (mobileNavButtonTarget.indexOf(e.target.className) < 0) {
-            this.setState({mobileNavMenuClass: mobileNavCollapseClasses.menuHidden});
+            this.setState({
+                headerClass: this.headerMenuCollapseClasses.menuHidden,
+                isHeaderOpen: false
+            });
         }
     }
 
     render() {
         return (
-            <header className="Header">
+            <header className={this.state.headerClass}>
                 <div className="nav-header">
                         <div className="header-title-container">
                             <div className="header-title"  onClick={() => this.props.setNavLink('home', '/')}>Jordan Foster</div>
@@ -83,7 +103,7 @@ class Header extends Component {
                             </button>
                         </div>
                 </div>
-                <div ref={node => this.node = node} className={this.state.mobileNavMenuClass}>
+                <div className={this.state.mobileNavMenuClass}>
                     <ul className="mobile-nav-list">
                         {
                             this.state.headerLinks.map((link, index) => {

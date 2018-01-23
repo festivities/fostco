@@ -1,6 +1,17 @@
-$mobile-nav-expand-time: 0.5s;
+$mobile-nav-expand-time: 0.7s;
 
 .Header {
+    height: $head-height;
+    overflow: hidden;
+    transition: height $mobile-nav-expand-time;
+    transition: height $mobile-nav-expand-time;
+    -webkit-transition: height $mobile-nav-expand-time;
+    -moz-transition: height $mobile-nav-expand-time;
+    -o-transition: height $mobile-nav-expand-time;
+
+    &.active {
+        height: 170px;
+    }
 
     .nav-header {
         background-color: $head-foot-background;
@@ -123,10 +134,6 @@ $mobile-nav-expand-time: 0.5s;
             height: 100px;
             width: 100%;
             background: $head-foot-background;
-            transition: height $mobile-nav-expand-time;
-            -webkit-transition: height $mobile-nav-expand-time;
-            -moz-transition: height $mobile-nav-expand-time;
-            -o-transition: height $mobile-nav-expand-time;
             display: block;
 
             ul {
@@ -145,41 +152,16 @@ $mobile-nav-expand-time: 0.5s;
                     display: flex;
                     align-items: center;
                     padding-left: 40px;
-                    transition: opacity $mobile-nav-expand-time, font-size $mobile-nav-expand-time;
-                    -webkit-transition: opacity $mobile-nav-expand-time, font-size $mobile-nav-expand-time;
-                    -moz-transition: opacity $mobile-nav-expand-time, font-size $mobile-nav-expand-time;
-                    -o-transition: opacity $mobile-nav-expand-time, font-size $mobile-nav-expand-time;
-                }
-            }
 
-            &.hidden {
-                height: 0px;
-    
-                ul {
-                    li {
-                        min-height: 33px;
-                        opacity: 0;
-                        font-size: 0em;
+                    font-size: 0.5em;
+
+                    &.active {
+                        background: $active-hover-color;
                     }
-                }
-            }
-    
-            &.expanded {
-                height: 100px;
-    
-                ul {
-                    li {
-                        opacity: 1;
-                        font-size: 0.5em;
 
-                        &:hover {
-                            cursor: pointer;
-                            background: $active-hover-color;
-                        }
-        
-                        &.active {
-                            background: $active-hover-color;
-                        }
+                    &:hover {
+                        cursor: pointer;
+                        background: $active-hover-color;
                     }
                 }
             }
