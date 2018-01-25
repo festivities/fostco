@@ -1,8 +1,0 @@
-import { createBrowserHistory } from 'history'
-
-export default function configureHistory() {
-    // return window.matchMedia('(display-mode: standalone)').matches
-    //     ? createHashHistory()
-    //     : createBrowserHistory();
-    return createBrowserHistory();
-}
