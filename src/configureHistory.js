@@ -1,4 +1,4 @@
-import { createBrowserHistory, createHashHistory } from 'history'
+import { createBrowserHistory } from 'history'
 
 export default function configureHistory() {
     // return window.matchMedia('(display-mode: standalone)').matches
