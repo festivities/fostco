@@ -56,9 +56,6 @@ class App extends Component {
   }
 
   setPublicPath = (pathName) => {
-    if (!this.state.url) {
-      alert(this.props.location.pathname);
-    }
     return process.env.PUBLIC_URL + pathName;
   }
 
