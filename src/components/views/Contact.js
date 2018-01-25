@@ -34,20 +34,8 @@ class Contact extends Component {
         return (
             <div className="content">
                 <div className="ContactPage">
-                    <div className="contact-overlay">
-                        <div className="overlay-info">
-                            <h1>Contact</h1>
-                            <h5>Currently the contact form is non-functional. This feature is coming soon!</h5>
-                            <h5>Please use either medium below to contact me and I will respond as soon as possible</h5>
-                            <div className="link-container">
-                                <p>Email: <a href="mailto:test@email.com" target="_top">test@email.com</a></p>
-                                <p>LinkedIn: <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com">www.linkedin.com</a></p>
-                            </div>
-                        </div>
-                        <div className="overlay-opacity"></div>
-                    </div>
-                    <div className="content-box last-content-box">
-                        <div className="box-content">
+                    <div className="content-box">
+                        {/* <div className="box-content">
                             <h1>Contact</h1>
                             <form className="contact-area" onSubmit={this.handleSubmit}>
                                 <h3>Please use the form below to contact me with any questions!</h3>
@@ -66,6 +54,17 @@ class Contact extends Component {
 
                                 <input className="input-submit" type="submit" value="Send" />
                             </form>
+                        </div> */}
+                        <div className="box-content temporary-content">
+                            <h1>Contact</h1>
+                            <h5>
+                                Currently the contact form is non-functional. This feature is coming soon!
+                                Please use either medium below to contact me and I will respond as soon as possible.
+                            </h5>
+                            <div className="link-container">
+                                <p>Email: <a href="mailto:test@email.com" target="_top">test@email.com</a></p>
+                                <p>LinkedIn: <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com">www.linkedin.com</a></p>
+                            </div>
                         </div>
                     </div>
                 </div>
