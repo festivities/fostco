@@ -55,6 +55,7 @@ class App extends Component {
   }
 
   setPublicPath = (pathName) => {
+    console.log("Public path: " + process.env.PUBLIC_URL);
     return process.env.PUBLIC_URL + pathName;
   }
 
