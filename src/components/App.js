@@ -17,7 +17,8 @@ class App extends Component {
         {name: 'home', path: '/', value: 'HOME', desktopClass: 'nav-item active', mobileClass: 'mobile-nav-item active', footerClass: 'footer-nav-item'},
         {name: 'about', path: '/about', value: 'ABOUT', desktopClass: 'nav-item', mobileClass: 'mobile-nav-item', footerClass: 'footer-nav-item'},
         {name: 'contact', path: '/contact', value: 'CONTACT', desktopClass: 'nav-item', mobileClass: 'mobile-nav-item', footerClass: 'footer-nav-item'}
-      ]
+      ],
+      url: ''
     };
   }
 
@@ -55,7 +56,9 @@ class App extends Component {
   }
 
   setPublicPath = (pathName) => {
-    console.log("Public path: " + process.env.PUBLIC_URL);
+    if (!this.state.url) {
+      alert(this.props.location.pathname);
+    }
     return process.env.PUBLIC_URL + pathName;
   }
 
