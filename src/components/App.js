@@ -30,8 +30,8 @@ class App extends Component {
   */
   setNavOnLoad = () => {
     let pathName = this.props.location.pathname;
-    let linkClicked = pathName === '/' ? 'home' : pathName.replace('/', '');
-    this.setNavLink(linkClicked, pathName, true);
+    let link = pathName === '/' || pathName === 'fostco/' ? 'home' : pathName.replace('/', '');
+    this.setNavLink(link, pathName, true);
   }
 
   /*
@@ -44,8 +44,7 @@ class App extends Component {
 
     let linkArray = this.state.navigationLinks;
 
-    for (let i = 0; i < linkArray.length; i++) {
-      let link = linkArray[i];
+    for (let link of linkArray) {
       link.desktopClass = 'nav-item';
       link.mobileClass = 'mobile-nav-item';
 
