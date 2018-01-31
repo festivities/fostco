@@ -1,10 +1,11 @@
 
 .InlineLink {
-    color: $active-hover-color;
+    color: $inline-link-color;
     text-decoration: underline;
+    font-weight: 500;
 
     &:hover {
-        color: $body-color;
+        color: $link-hover-color;
         cursor: pointer;
     }
 }
