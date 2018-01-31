@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 const Footer = (props) => {
     return (
@@ -19,10 +18,5 @@ const Footer = (props) => {
         </footer>
     );
 }
-
-Footer.propTypes = {
-    navigationLinks: PropTypes.array,
-    onNavigate: PropTypes.func
-};
 
 export default Footer;

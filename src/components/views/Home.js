@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import InlineLink from '../common/InlineLink';
 
@@ -24,9 +23,5 @@ const Home = (props) => {
         </div>
     );
 }
-
-Home.propTypes = {
-    onNavigate: PropTypes.func
-};
 
 export default Home;
