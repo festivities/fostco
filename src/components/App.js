@@ -30,7 +30,9 @@ class App extends Component {
   */
   setNavOnLoad = () => {
     let pathName = this.props.location.pathname;
-    let link = pathName === '/' || pathName === 'fostco/' ? 'home' : pathName.replace('/', '');
+    let link = pathName.indexOf('/fostco') ? pathName.replace('/fostco', '') : pathName;
+    link = pathName === '/' ? 'home' : pathName.replace('/', '');
+    
     this.setNavLink(link, pathName, true);
   }
 
