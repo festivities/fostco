@@ -84,13 +84,17 @@ class Header extends Component {
             <header className={this.state.headerClass}>
                 <div className="nav-header">
                         <div className="header-title-container">
-                            <div className="header-title"  onClick={() => this.props.setNavLink('home', '/')}>Jordan Foster</div>
+                            <div className="header-title"  onClick={() => this.props.onNavigate('home')}>Jordan Foster</div>
                         </div>
                         <div className="navigation">
                             <ul className="nav-menu">
                                 {
                                     this.state.headerLinks.map((link, index) => {
-                                        return (<li className={link.desktopClass} key={index} onClick={() => this.props.setNavLink(link.name, link.path)}>{link.value}</li>);
+                                        return (
+                                            <li className={'nav-item' + (link.isActive ? ' active' : '')} key={index} onClick={() => this.props.onNavigate(link)}>
+                                                {link.value}
+                                            </li>
+                                        );
                                     })
                                 }
                             </ul>
@@ -107,7 +111,11 @@ class Header extends Component {
                     <ul className="mobile-nav-list">
                         {
                             this.state.headerLinks.map((link, index) => {
-                                return (<li className={link.mobileClass} key={index} onClick={() => this.props.setNavLink(link.name, link.path)}>{link.value}</li>);
+                                return (
+                                    <li className={'mobile-nav-item' + (link.isActive ? ' active' : '')} key={index} onClick={() => this.props.onNavigate(link)}>
+                                        {link.value}
+                                    </li>
+                                );
                             })
                         }
                     </ul>
@@ -119,7 +127,7 @@ class Header extends Component {
 
 Header.propTypes = {
     navigationLinks: PropTypes.array,
-    setNavLink: PropTypes.func
+    onNavigate: PropTypes.func
 };
 
 export default Header;

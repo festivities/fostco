@@ -15,8 +15,8 @@ const Home = (props) => {
                             there will be more features to come!
                         </p><br />
                         <p>
-                            Check out <InlineLink navigate={props.setNavLink} linkValue='About' /> for more details about me and how this site was made
-                            or feel free to use <InlineLink navigate={props.setNavLink} linkValue='Contact' /> to get a hold of me for any questions, or comments.
+                            Check out <InlineLink onNavigate={props.onNavigate} linkValue='About' /> for more details about me and how this site was made
+                            or feel free to use <InlineLink onNavigate={props.onNavigate} linkValue='Contact' /> to get a hold of me for any questions, or comments.
                         </p>
                     </div>
                 </div>
@@ -26,7 +26,7 @@ const Home = (props) => {
 }
 
 Home.propTypes = {
-    setNavLink: PropTypes.func
+    onNavigate: PropTypes.func
 };
 
 export default Home;

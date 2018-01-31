@@ -12,11 +12,10 @@ class App extends Component {
     super(props);
 
     this.state = {
-      currentPage: '',
       navigationLinks: [
-        { name: 'home', path: '/', value: 'HOME', desktopClass: 'nav-item active', mobileClass: 'mobile-nav-item active' },
-        { name: 'about', path: '/about', value: 'ABOUT', desktopClass: 'nav-item', mobileClass: 'mobile-nav-item' },
-        { name: 'contact', path: '/contact', value: 'CONTACT', desktopClass: 'nav-item', mobileClass: 'mobile-nav-item' }
+        { name: 'home', path: '/', value: 'HOME', isActive: false },
+        { name: 'about', path: '/about', value: 'ABOUT', isActive: false },
+        { name: 'contact', path: '/contact', value: 'CONTACT', isActive: false  }
       ]
     };
   }
@@ -30,36 +29,36 @@ class App extends Component {
   */
   setNavOnLoad = () => {
     let pathName = this.props.location.pathname;
-    let link = pathName.indexOf('/fostco') > -1 ? pathName.replace('/fostco', '') : pathName;
-    link = pathName === '/' ? 'home' : pathName.replace('/', '');
+    let cleanPath = pathName.indexOf('/fostco') > -1 ? pathName.replace('/fostco', '') : pathName;
+    let pathInFocus = this.state.navigationLinks.find((navMatch) => navMatch.path === cleanPath);
+    this.onNavigate(pathInFocus, true);
+  }
 
-    this.setNavLink(link, pathName, true);
+  getNavLinkByName = (pathName) => {
+    return this.state.navigationLinks.find((navMatch) => navMatch.name === pathName);
   }
 
   /*
-  * Sets the nav menu button active on click and on load
+  * Sets the nav menu button active on click or on load
   * - isOnLoad is used to determine if this function was called on app load
   * - this is so the function will not continuously try to load the page visited
   */
-  setNavLink = (linkClicked, pathName, isOnLoad = false) => {
-    this.setState({currentPage: linkClicked});
+  onNavigate = (path, isOnLoad = false) => {
+    // Check if onClick event came from inline link
+    if (typeof path === 'string') {
+      path = this.state.navigationLinks.find((navMatch) => navMatch.name === path);
+    }
 
     let linkArray = this.state.navigationLinks;
 
     for (let link of linkArray) {
-      link.desktopClass = 'nav-item';
-      link.mobileClass = 'mobile-nav-item';
-
-      if (link.name === linkClicked) {
-        link.desktopClass += ' active';
-        link.mobileClass += ' active';
-      }
+      link.isActive = link.name === path.name;
     }
 
     this.setState({ navigationLinks: linkArray });
 
     if (!isOnLoad) {
-      this.props.history.push(this.setPublicPath(pathName));
+      this.props.history.push(this.setPublicPath(path.path));
       window.scrollTo(0,0);
     }
   }
@@ -74,14 +73,14 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header navigationLinks={this.state.navigationLinks} setNavLink={this.setNavLink} />
+        <Header navigationLinks={this.state.navigationLinks} onNavigate={this.onNavigate} />
           <Switch>
-            <Route exact path={this.setPublicPath('/')} render={() => <Home setNavLink={this.setNavLink} />} />
-            <Route path={this.setPublicPath('/about')} render={() => <About setNavLink={this.setNavLink} />} />
+            <Route exact path={this.setPublicPath('/')} render={() => <Home onNavigate={this.onNavigate} />} />
+            <Route path={this.setPublicPath('/about')} render={() => <About onNavigate={this.onNavigate} />} />
             <Route path={this.setPublicPath('/contact')} component={Contact} />
             <Redirect to='/' />
           </Switch>
-        <Footer footerLinks={this.state.navigationLinks} setNavLink={this.setNavLink} />
+        <Footer navigationLinks={this.state.navigationLinks} onNavigate={this.onNavigate} />
       </div>
     );
   }

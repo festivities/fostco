@@ -10,8 +10,8 @@ const Footer = (props) => {
                 </div>
                 <div className="nav-links">
                     <ul>
-                        {props.footerLinks.map((link, index) => {
-                                return (<li className="footer-nav-item" key={index} onClick={() => props.setNavLink(link.name, link.path)}>{link.value}</li>);
+                        {props.navigationLinks.map((link, index) => {
+                                return (<li className="footer-nav-item" key={index} onClick={() => props.onNavigate(link)}>{link.value}</li>);
                         })}
                     </ul>
                 </div>
@@ -22,7 +22,7 @@ const Footer = (props) => {
 
 Footer.propTypes = {
     navigationLinks: PropTypes.array,
-    setNavLink: PropTypes.func
+    onNavigate: PropTypes.func
 };
 
 export default Footer;

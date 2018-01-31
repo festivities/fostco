@@ -53,7 +53,7 @@ class About extends Component {
                 </p><br/>
                 <p>
                     If you have any questions then feel free to use 
-                    the <InlineLink navigate={this.props.setNavLink} linkValue='Contact' /> page to get ahold of me.
+                    the <InlineLink onNavigate={this.props.onNavigate} linkValue='Contact' /> page to get ahold of me.
                 </p><br/>
                 <p>Thanks for visiting!</p>
             </div>
@@ -93,7 +93,7 @@ class About extends Component {
                 <h5>Questions about code or you have a suggestion:</h5>
                 <p>
                     This site is partially for experimentation so that's most likely why I did whatever head scratching piece of code you are looking at. 
-                    However, please feel free to use the <InlineLink navigate={this.props.setNavLink} linkValue='Contact' /> page to contact me with any questions, suggestions, 
+                    However, please feel free to use the <InlineLink onNavigate={this.props.onNavigate} linkValue='Contact' /> page to contact me with any questions, suggestions, 
                     criticisms, or general comments!
                 </p>
             </div>
@@ -115,7 +115,7 @@ class About extends Component {
 }
 
 About.propTypes = {
-    setNavLink: PropTypes.func
+    onNavigate: PropTypes.func
 };
 
 export default About;
