@@ -14,11 +14,10 @@ class App extends Component {
     this.state = {
       currentPage: '',
       navigationLinks: [
-        {name: 'home', path: '/', value: 'HOME', desktopClass: 'nav-item active', mobileClass: 'mobile-nav-item active', footerClass: 'footer-nav-item'},
-        {name: 'about', path: '/about', value: 'ABOUT', desktopClass: 'nav-item', mobileClass: 'mobile-nav-item', footerClass: 'footer-nav-item'},
-        {name: 'contact', path: '/contact', value: 'CONTACT', desktopClass: 'nav-item', mobileClass: 'mobile-nav-item', footerClass: 'footer-nav-item'}
-      ],
-      url: ''
+        { name: 'home', path: '/', value: 'HOME', desktopClass: 'nav-item active', mobileClass: 'mobile-nav-item active' },
+        { name: 'about', path: '/about', value: 'ABOUT', desktopClass: 'nav-item', mobileClass: 'mobile-nav-item' },
+        { name: 'contact', path: '/contact', value: 'CONTACT', desktopClass: 'nav-item', mobileClass: 'mobile-nav-item' }
+      ]
     };
   }
 
@@ -26,18 +25,27 @@ class App extends Component {
     this.setNavOnLoad();
   }
 
+  /*
+  * Sets the nav menu button active depending on the page visited
+  */
   setNavOnLoad = () => {
     let pathName = this.props.location.pathname;
     let linkClicked = pathName === '/' ? 'home' : pathName.replace('/', '');
     this.setNavLink(linkClicked, pathName, true);
   }
 
+  /*
+  * Sets the nav menu button active on click and on load
+  * - isOnLoad is used to determine if this function was called on app load
+  * - this is so the function will not continuously try to load the page visited
+  */
   setNavLink = (linkClicked, pathName, isOnLoad = false) => {
     this.setState({currentPage: linkClicked});
 
     let linkArray = this.state.navigationLinks;
 
-    for (let link of linkArray) {
+    for (let i = 0; i < linkArray.length; i++) {
+      let link = linkArray[i];
       link.desktopClass = 'nav-item';
       link.mobileClass = 'mobile-nav-item';
 
@@ -55,6 +63,9 @@ class App extends Component {
     }
   }
 
+  /*
+  * Appends the PUBLIC_URL path for routing
+  */
   setPublicPath = (pathName) => {
     return process.env.PUBLIC_URL + pathName;
   }
@@ -69,7 +80,7 @@ class App extends Component {
             <Route path={this.setPublicPath('/contact')} component={Contact} />
             <Redirect to='/' />
           </Switch>
-        <Footer navigationLinks={this.state.navigationLinks} setNavLink={this.setNavLink} />
+        <Footer footerLinks={this.state.navigationLinks} setNavLink={this.setNavLink} />
       </div>
     );
   }

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class RadioButtonGroup extends Component {
 
@@ -10,6 +11,9 @@ class RadioButtonGroup extends Component {
         }
     }
 
+    /*
+    * Sets radio button to checked and calls parent function
+    */
     setChecked = (option) => {
         if (this.state.activeValue !== option) {
             this.setState({ activeValue: option });
@@ -34,5 +38,11 @@ class RadioButtonGroup extends Component {
         )
     }
 }
+
+RadioButtonGroup.propTypes = {
+    defaultActive: PropTypes.string,
+    options: PropTypes.array,
+    checkAction: PropTypes.func
+};
 
 export default RadioButtonGroup;

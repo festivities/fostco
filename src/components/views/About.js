@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+
 import InlineLink from '../common/InlineLink';
 import RadioButtonGroup from '../common/RadioButtonGroup';
 
@@ -16,6 +18,9 @@ class About extends Component {
         }
     }
 
+    /*
+    * Toggles About Me text and About This Site text on radio button click
+    */
     determineText = (option) => {
         if (this.aboutMe === option) {
             this.setState({aboutText: this.setAboutMeText()});
@@ -24,6 +29,9 @@ class About extends Component {
         }
     }
 
+    /*
+    * Returns About Me specific jsx/text
+    */
     setAboutMeText = () => {
         return (
             <div className="box-content">
@@ -45,13 +53,16 @@ class About extends Component {
                 </p><br/>
                 <p>
                     If you have any questions then feel free to use 
-                    the <InlineLink navFunc={this.props.setNavLink} linkValue='Contact' /> page to get ahold of me.
+                    the <InlineLink navigate={this.props.setNavLink} linkValue='Contact' /> page to get ahold of me.
                 </p><br/>
                 <p>Thanks for visiting!</p>
             </div>
         );
     }
 
+    /*
+    * Returns About Site specific jsx/text
+    */
     setAboutSiteText = () => {
         return (
             <div className="box-content">
@@ -82,7 +93,7 @@ class About extends Component {
                 <h5>Questions about code or you have a suggestion:</h5>
                 <p>
                     This site is partially for experimentation so that's most likely why I did whatever head scratching piece of code you are looking at. 
-                    However, please feel free to use the <InlineLink navFunc={this.props.setNavLink} linkValue='Contact' /> page to contact me with any questions, suggestions, 
+                    However, please feel free to use the <InlineLink navigate={this.props.setNavLink} linkValue='Contact' /> page to contact me with any questions, suggestions, 
                     criticisms, or general comments!
                 </p>
             </div>
@@ -92,15 +103,19 @@ class About extends Component {
     render() {
         return (
             <div className="content">
-            <div className="AboutPage">
-                <div className="content-box">
-                    <RadioButtonGroup defaultActive={this.aboutMe} options={this.state.radioOptions} checkAction={(option) => {this.determineText(option)}} />
-                    {this.state.aboutText}
+                <div className="AboutPage">
+                    <div className="content-box">
+                        <RadioButtonGroup defaultActive={this.aboutMe} options={this.state.radioOptions} checkAction={(option) => {this.determineText(option)}} />
+                        {this.state.aboutText}
+                    </div>
                 </div>
             </div>
-            </div>
-        )
+        );
     }
 }
+
+About.propTypes = {
+    setNavLink: PropTypes.func
+};
 
 export default About;

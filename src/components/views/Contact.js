@@ -69,7 +69,7 @@ class Contact extends Component {
                     </div>
                 </div>
             </div>
-        )
+        );
     }
 }
 
