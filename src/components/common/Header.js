@@ -91,6 +91,7 @@ class Header extends Component {
                                 {
                                     this.state.headerLinks.map((link, index) => {
                                         return (
+                                            link.isPublic &&
                                             <li className={'nav-item' + (link.isActive ? ' active' : '')} key={index} onClick={() => this.props.onNavigate(link)}>
                                                 {link.value}
                                             </li>
@@ -112,6 +113,7 @@ class Header extends Component {
                         {
                             this.state.headerLinks.map((link, index) => {
                                 return (
+                                    link.isPublic &&
                                     <li className={'mobile-nav-item' + (link.isActive ? ' active' : '')} key={index} onClick={() => this.props.onNavigate(link)}>
                                         {link.value}
                                     </li>

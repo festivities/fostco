@@ -10,7 +10,10 @@ const Footer = (props) => {
                 <div className="nav-links">
                     <ul>
                         {props.navigationLinks.map((link, index) => {
-                                return (<li className="footer-nav-item" key={index} onClick={() => props.onNavigate(link)}>{link.value}</li>);
+                                return (
+                                    link.isPublic &&
+                                    <li className="footer-nav-item" key={index} onClick={() => props.onNavigate(link)}>{link.value}</li>
+                                );
                         })}
                     </ul>
                 </div>

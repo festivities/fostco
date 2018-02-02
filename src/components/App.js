@@ -5,6 +5,7 @@ import Header from './common/Header';
 import Home from './views/Home';
 import About from './views/About';
 import Contact from './views/Contact';
+import Slawrence from './views/Slawrence';
 import Footer from './common/Footer';
 
 class App extends Component {
@@ -13,9 +14,10 @@ class App extends Component {
 
     this.state = {
       navigationLinks: [
-        { name: 'home', path: '/', value: 'HOME', isActive: false },
-        { name: 'about', path: '/about', value: 'ABOUT', isActive: false },
-        { name: 'contact', path: '/contact', value: 'CONTACT', isActive: false  }
+        { name: 'home', path: '/', value: 'HOME', isActive: false, isPublic: true },
+        { name: 'about', path: '/about', value: 'ABOUT', isActive: false, isPublic: true },
+        { name: 'contact', path: '/contact', value: 'CONTACT', isActive: false, isPublic: true  },
+        { name: 'slawrence', path: '/slawrence', value: 'SLAWRENCE', isActive: false, isPublic: false }
       ]
     };
   }
@@ -78,6 +80,7 @@ class App extends Component {
             <Route exact path={this.setPublicPath('/')} render={() => <Home onNavigate={this.onNavigate} />} />
             <Route path={this.setPublicPath('/about')} render={() => <About onNavigate={this.onNavigate} />} />
             <Route path={this.setPublicPath('/contact')} component={Contact} />
+            <Route path={this.setPublicPath('/slawrence')} component={Slawrence} />
             <Redirect to='/' />
           </Switch>
         <Footer navigationLinks={this.state.navigationLinks} onNavigate={this.onNavigate} />
