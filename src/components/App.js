@@ -24,6 +24,15 @@ class App extends Component {
 
   componentDidMount() {
     this.setNavOnLoad();
+
+    // Set Navigation when user uses browsers back or forward button
+    window.onpopstate = () => {
+      this.setNavOnLoad();
+    }
+  }
+
+  componentDidUpdate() {
+    // this.setNavOnLoad();
   }
 
   /*
