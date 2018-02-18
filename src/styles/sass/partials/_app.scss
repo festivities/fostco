@@ -17,6 +17,26 @@
             flex-direction: column;
             flex: 1;
         }
+
+        .Slawrence {
+            .content-box {
+                .slawrence-header {
+                    font-size: 0.9em;
+                }
+
+                select {
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                    height: 40px;
+                    outline: none;
+                    border: none;
+                    color: #0C7489;
+                    font-weight: bold;
+                    padding-left: 20px;
+                    font-size: 20px;
+                }
+            }
+        }
     }
     
     .content-box {

@@ -5,7 +5,7 @@ import Header from './common/Header';
 import Home from './views/Home';
 import About from './views/About';
 import Contact from './views/Contact';
-import Slawrence from './views/Slawrence';
+import Slawrence from './views/slawrence/Slawrence';
 import Footer from './common/Footer';
 
 class App extends Component {

@@ -1,0 +1,63 @@
+.EntriesTable {
+    width: 100%;
+    border-collapse: collapse;
+
+    tbody {
+        tr {
+            th {
+                border: 1px solid white;
+            }
+
+            td {
+                border: 1px solid white;
+                text-align: center;
+            }
+
+            #bet-id {
+                width: 40px;
+            }
+
+            #bet-info {
+                text-align: left;
+                padding-left: 10px;
+            }
+
+            #description {
+                text-align: left;
+                padding-left: 2%;
+            }
+
+            .desktop-bet-item {
+                display: table-cell;
+            }
+
+            .mobile-bet-item {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 526px) {
+    .EntriesTable {
+        tbody {
+            tr {
+                .desktop-bet-item {
+                    display: none;
+                }
+
+                .mobile-bet-item {
+                    display: table-cell;
+
+                    ul {
+                        padding-left: 10px;
+                        li {
+                            list-style: none;
+                            text-align: left;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
