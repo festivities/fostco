@@ -40,7 +40,6 @@ class Slawrence extends Component {
             .then((response) => {
                 if (response.ok) {
                     response.json().then((betsJson) => {
-                        console.log(betsJson);
                         this.cleanBets(betsJson);
                         this.determineText(this.entriesView);
                     });
@@ -78,9 +77,6 @@ class Slawrence extends Component {
         this.setState({ allBetData: bets });
     }
 
-    /*
-    * Toggles How To Use text and Win/Loss Statistics text on radio button click
-    */
     determineText = (option) => {
         if (option === 'error') {
             this.setState({
