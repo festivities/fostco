@@ -40,6 +40,7 @@ class Slawrence extends Component {
             .then((response) => {
                 if (response.ok) {
                     response.json().then((betsJson) => {
+                        console.log(betsJson);
                         this.cleanBets(betsJson);
                         this.determineText(this.entriesView);
                     });
@@ -70,6 +71,14 @@ class Slawrence extends Component {
                 if (!betNames.includes(takerName)) {
                     betNames.push(takerName);
                 }
+            } else {
+                bet.takerName = 'N/A';
+            }
+
+            if (bet.winnerName) {
+                bet.winnerName = bet.winnerName.charAt(0).toUpperCase() + bet.winnerName.slice(1);
+            } else {
+                bet.winnerName = 'N/A';
             }
         }
         this.setState({names: betNames});

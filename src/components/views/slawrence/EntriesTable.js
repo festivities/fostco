@@ -8,6 +8,7 @@ const EntriesTable = (props) => {
                     <th id="bet-id">ID</th>
                     <th className="desktop-bet-item">Setter</th>
                     <th className="desktop-bet-item">Taker</th>
+                    <th className="desktop-bet-item">Winner</th>
                     <th className="desktop-bet-item" id="description">Bet</th>
                     <th className="desktop-bet-item">Amount</th>
                     <th className="desktop-bet-item">Status</th>
@@ -19,17 +20,45 @@ const EntriesTable = (props) => {
                             <td id="bet-id">{bet._id}</td>
                             <td className="desktop-bet-item">{bet.setterName}</td>
                             <td className="desktop-bet-item">{bet.takerName}</td>
+                            <td className="desktop-bet-item">{bet.winnerName}</td>
                             <td className="desktop-bet-item" id="description">{bet.description}</td>
-                            <td className="desktop-bet-item">${bet.amount}</td>
+                            <td className="desktop-bet-item">$ {bet.amount}</td>
                             <td className="desktop-bet-item">{bet.status}</td>
                             <td className="mobile-bet-item">
-                                <ul>
-                                    <li>Setter: {bet.setterName}</li>
-                                    <li>Taker: {bet.takerName}</li>
-                                    <li>Bet: {bet.description}</li>
-                                    <li>Amount: ${bet.amount}</li>
-                                    <li>Status: {bet.status}</li>
-                                </ul>
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td>Setter</td>
+                                            <td className="mobile-item-divider">-</td>
+                                            <td>{bet.setterName}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Taker</td>
+                                            <td className="mobile-item-divider">-</td>
+                                            <td>{bet.takerName}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Winner</td>
+                                            <td className="mobile-item-divider">-</td>
+                                            <td>{bet.winnerName}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Bet</td>
+                                            <td className="mobile-item-divider">-</td>
+                                            <td>{bet.description}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Amount</td>
+                                            <td className="mobile-item-divider">-</td>
+                                            <td>$ {bet.amount}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Status</td>
+                                            <td className="mobile-item-divider">-</td>
+                                            <td>{bet.status}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </td>
                         </tr>
                     );

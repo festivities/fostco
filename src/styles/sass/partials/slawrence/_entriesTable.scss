@@ -49,11 +49,21 @@
                 .mobile-bet-item {
                     display: table-cell;
 
-                    ul {
-                        padding-left: 10px;
-                        li {
-                            list-style: none;
-                            text-align: left;
+                    table {
+                        padding: 10px;
+
+                        tbody {
+                            tr {
+                                td {
+                                    text-align: left;
+                                    border: none;
+                                    vertical-align: top;
+                                }
+
+                                .mobile-item-divider {
+                                    padding-right: 10px;
+                                }
+                            }
                         }
                     }
                 }
