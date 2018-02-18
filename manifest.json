@@ -1,0 +1,15 @@
+{
+  "short_name": "Fostco",
+  "name": "Fostco",
+  "icons": [
+    {
+      "src": "favicon-256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#07BEB8",
+  "background_color": "#07BEB8"
+}
