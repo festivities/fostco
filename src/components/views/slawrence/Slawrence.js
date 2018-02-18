@@ -151,6 +151,7 @@ class Slawrence extends Component {
                                 })}
                             </select>)
                         }
+                        <button className="refresh-button" onClick={this.getBets}>Refresh</button>
                         {/* {this.state.botPageView} */}
                         <div className="box-content">
                             <EntriesTable betData={this.state.betData} />
